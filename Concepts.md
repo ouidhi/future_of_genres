@@ -1,5 +1,7 @@
 # Concepts/ theory
-## Understanding relevant concepts/ theory used in the project here.
+> Understanding relevant concepts/ theory used in the project here.
+
+# Time-series forecasting
 
 ## Seasonality
 ### Interpreting graph 
