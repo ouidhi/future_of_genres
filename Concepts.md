@@ -5,6 +5,7 @@
 ### Interpreting graph 
 https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/ 
 
+## Different kinds of time-series forecasting models
 
 ## ARIMA model selection
 https://www.analyticsvidhya.com/blog/2018/08/auto-arima-time-series-modeling-python-r/ 
