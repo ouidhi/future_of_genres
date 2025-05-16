@@ -30,6 +30,7 @@ This is where we use the results of time-series analysis to create a forecast of
 
 ## Time-series components
 A given time series is thought to consist of three systematic components including level, trend, seasonality, and one non-systematic component called noise. 
+
 ### Interpreting graph 
 https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/ 
 
