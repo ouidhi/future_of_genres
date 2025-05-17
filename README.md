@@ -201,7 +201,6 @@ I will now fit the SARIMA model using these parameters.
 
 Fitted SARIMA model using selected parameters.
 Forecasted test set and evaluated model accuracy.
-Produced final forecast for 24 months ahead (2025-2026).
 
 ```python
 # fitting a SARIMA model by adjusting the parameters by evaluation the model   
@@ -263,6 +262,39 @@ plt.legend()
 
 Ensured model reliability before long-term forecasting.
 
+**vii. Final 2 year forecast**
+Produced final forecast for 24 months ahead (2025-2026).
+
+```python
+# fitting a SARIMA model by adjusting the parameters by evaluation the model   
+model = SARIMAX(hiphop, 
+                order=(1, 1, 1), # (p, d, q)
+                seasonal_order=(1, 0, 1, 12), # (P, D, Q, m)
+                enforce_stationarity=False, 
+                enforce_invertibility=False)
+
+model_fit = model.fit()
+print(model_fit.summary())
+
+# forecasting the next 24 months using the trained and tested model.
+forecast = model_fit.get_forecast(steps=24)
+mean_forecast = forecast.predicted_mean
+conf_int = forecast.conf_int()
+
+# creating a future date index for plotting the forecast.
+future_dates = pd.date_range(start=hiphop.index[-1] + pd.DateOffset(months=1), periods=24, freq='MS')
+
+
+# plotting the historical data, forecasted values, and the confidence intervals
+plt.figure(figsize=(12, 5))
+plt.plot(hiphop, label='Historical')
+plt.plot(future_dates, mean_forecast, label='Forecast', color='pink')
+plt.fill_between(future_dates, conf_int.iloc[:, 0], conf_int.iloc[:, 1], color='pink', alpha=0.2)
+plt.title('SARIMA Forecast')
+plt.legend()
+plt.tight_layout()
+plt.show()
+```
 
 ## Why SARIMA?
 
