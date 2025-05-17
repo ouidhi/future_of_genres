@@ -41,8 +41,8 @@ trend_df.dropna(inplace=True)
 
 # Save to CSV for further analysis
 trend_df.to_csv('trend_df.csv', index=True) 
-Tracks how music genres evolve and predicts future trends using Spotify + Google Trends data. Also explores if genre diversity boosts artist popularity with entropy scores and regression. Insightful for labels, A\&amp;R, and marketing teams spotting emerging genres and versatile artists.
 ```
+Tracks how music genres evolve and predicts future trends using Spotify + Google Trends data. Also explores if genre diversity boosts artist popularity with entropy scores and regression. Insightful for labels, A&R, and marketing teams spotting emerging genres and versatile artists.
 
 ## Dataset Description
 - The resulting dataset contains monthly interest scores (0–100) for each genre.
@@ -99,15 +99,42 @@ latin = df['latin music']
 indie = df['indie music']
 ```
 
-For each genre, following steps were taken to create a 2 year forecast:
+For each genre, following steps were taken to create a 2 year forecast. I have shown the detailed process for hte genre Hip-hop here but the same procedure id used for the other 8 genres.
 
 1. Stationarity Check
 Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
 Stationarity is necessary for ARIMA/SARIMA models to perform well.
 
+Learn more about stationaity in time series. 
+
+```python
+# Stationarity check 
+result = adfuller(hiphop)
+
+print("ADF Statistic:", result[0])
+print("p-value:", result[1])
+```
+Output:
+ADF Statistic: -1.9786153985808255
+p-value: 0.2960274892539917
+
+Interpreation:
+the p-value is 0.296, which is much higher than 0.05, so we conclude that the 'hiphop' time series is non-stationary. This means that the mean, variance, or both are not constant over time, which can affect modeling techniques like ARIMA that assume stationarity.
+
 2. Seasonality Analysis
 Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
 Seasonality justifies the choice of SARIMA over simpler ARIMA.
+We decompose each genre's trend line to see if there's a repeating seasonal pattern. 
+- If strong seasonality: we model it with SARIMA.
+- If weak/no seasonality: we skip it and use ARIMA.
+
+```python
+result = seasonal_decompose(hiphop, model='additive', period=12)  # for monthly data with yearly seasonality
+result.plot()
+plt.show()
+```
+![hiphop_season](https://github.com/user-attachments/assets/8f9ae497-7519-4656-bed5-ba3e70b70dab)
+
 
 3. Train-Test Split
 Split data into training (all data except last 12 months) and testing sets (last 12 months).
