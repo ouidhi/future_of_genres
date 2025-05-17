@@ -51,39 +51,82 @@ Tracks how music genres evolve and predicts future trends using Spotify + Google
 
 ## Project Workflow
 
-1. Data Loading and Preprocessing
+1. Importing libraries, Data Loading and Preprocessing
 Imported the dataset and set the date column as a datetime index.
 Selected relevant genre columns for analysis.
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+from statsmodels.tsa.stattools import adfuller
+from statsmodels.tsa.statespace.sarimax import SARIMAX
+from pmdarima import auto_arima # chooses best value for p,d,q 
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+import numpy as np
+
+import warnings
+warnings.filterwarnings("ignore")
+
+# time series data
+df = pd.read_csv('/Users/vidhiparmar/Desktop/projects/future_genre/trend_data/trend_df.csv')
+
+# preprocessing the dataframe
+df.drop('r and b music', axis= 1, inplace= True) # not sufficient variation in the column - r and b music
+df['date'] = pd.to_datetime(df['date'])
+df.set_index('date', inplace= True)
+```
 
 2. Exploratory Data Analysis (EDA)
 Visualized trends to identify patterns.
 Checked for missing data and handled anomalies.
+Extracted each genre as a Pandas Series object. 
 
-3. Stationarity Check
+```python
+print(f'Top 5 rows:\n{df.head()}\n')
+print(f'Summary Stats:\n{df.describe()}\n')
+print(f'Missing null values:\n{df.isna().sum()}')
+
+hiphop = df['hip hop music']
+pop = df['pop music']
+country = df['country music']
+rock = df['rock music']
+alter = df['alternative music']
+kpop = df['kpop music']
+metal = df['metal music']
+latin = df['latin music']
+indie = df['indie music']
+```
+
+For each genre, following steps were taken to create a 2 year forecast:
+
+1. Stationarity Check
 Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
 Stationarity is necessary for ARIMA/SARIMA models to perform well.
 
-4. Seasonality Analysis
+2. Seasonality Analysis
 Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
 Seasonality justifies the choice of SARIMA over simpler ARIMA.
 
-5. Train-Test Split
+3. Train-Test Split
 Split data into training (all data except last 12 months) and testing sets (last 12 months).
 This allows for evaluation of model performance on unseen data.
 
-6. Model Selection: Auto ARIMA
+4. Model Selection: Auto ARIMA
 Utilized pmdarima.auto_arima to automatically select optimal p, d, q parameters.
 Balanced between underfitting and overfitting.
 
-7. SARIMA Modeling and Forecasting
+5. SARIMA Modeling and Forecasting
 Fitted SARIMA model using selected parameters.
 Forecasted test set and evaluated model accuracy.
 Produced final forecast for 24 months ahead (2025-2026).
 
-8. Model Evaluation
+6. Model Evaluation
 Used Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) to evaluate test forecasts.
 Ensured model reliability before long-term forecasting.
-Why SARIMA?
+
+## Why SARIMA?
 
 The dataset contains 83 monthly data points — enough to capture yearly seasonality.
 SARIMA explicitly models both seasonal and non-seasonal components, critical for music trends that often show cyclic interest (e.g., seasonal releases, festival seasons).
