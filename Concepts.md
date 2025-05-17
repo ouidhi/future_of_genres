@@ -129,10 +129,12 @@ SARIMA(p, d, q)(P, D, Q, s) adds:
 
 These components are generated using auto_arima() but I've used following measrues to fint-tune ht model for each genre.
 - ACF, PACF plots
-- Seasonality and seasonality strength
-
+- Seasonality & seasonality strength
+- Ljung-Box p-value
+- Jarque-Bera p-value 
 
 Sources
+
 https://machinelearningmastery.com/decompose-time-series-data-trend-seasonality/ 
 https://www.analyticsvidhya.com/blog/2018/08/auto-arima-time-series-modeling-python-r/ 
 https://www.geeksforgeeks.org/sarima-seasonal-autoregressive-integrated-moving-average/ 
