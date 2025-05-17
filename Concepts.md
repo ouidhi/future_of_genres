@@ -37,7 +37,9 @@ If the series is not stationary, techniques like differencing, log transformatio
 4. Check seasonality
 
 ## Time series forecasting
+
 Time series forecasting = predicting the future.
+
 After analyzing past data, the next goal is to use that information to forecast future values. This involves selecting a model, evaluating its accuracy, and generating future predictions. This includes following steps:
 
 
@@ -47,16 +49,25 @@ Different Kinds of Time Series Forecasting Models
 Here are a few common approaches:
 
 Naive Forecasting: Assumes future values equal the last observed value.
+
 Moving Average / Exponential Smoothing: Averages out noise, gives weight to recent data.
+
 ARIMA (AutoRegressive Integrated Moving Average): Good for non-seasonal data.
+
 SARIMA (Seasonal ARIMA): Extension of ARIMA for seasonal datasets.
+
 Prophet (by Facebook): Handles missing data, seasonality, and holidays.
+
 LSTM (Neural Networks): For deep learning approaches to time series.
+
 Each model has pros and cons based on the complexity and behavior of your data.
 
 The choice depends on:
+
 Presence of seasonality
+
 Stationarity
+
 Complexity of the data
 
 2. Splitting training and test data
