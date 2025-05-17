@@ -45,65 +45,52 @@ After analyzing past data, the next goal is to use that information to forecast 
 
 1. Selecting a model
 
-Different Kinds of Time Series Forecasting Models
+Different Kinds of Time Series Forecasting Models:
 
-Here are a few common approaches:
-
-Naive Forecasting: Assumes future values equal the last observed value.
-
-Moving Average / Exponential Smoothing: Averages out noise, gives weight to recent data.
-
-ARIMA (AutoRegressive Integrated Moving Average): Good for non-seasonal data.
-
-SARIMA (Seasonal ARIMA): Extension of ARIMA for seasonal datasets.
-
-Prophet (by Facebook): Handles missing data, seasonality, and holidays.
-
-LSTM (Neural Networks): For deep learning approaches to time series.
+- Naive Forecasting: Assumes future values equal the last observed value.
+- Moving Average / Exponential Smoothing: Averages out noise, gives weight to recent data.
+- ARIMA (AutoRegressive Integrated Moving Average): Good for non-seasonal data.
+- SARIMA (Seasonal ARIMA): Extension of ARIMA for seasonal datasets.
+- Prophet (by Facebook): Handles missing data, seasonality, and holidays.
+- LSTM (Neural Networks): For deep learning approaches to time series.
 
 Each model has pros and cons based on the complexity and behavior of your data.
 
 The choice depends on:
-
-Presence of seasonality
-
-Stationarity
-
-Complexity of the data
+- Presence of seasonality
+- Stationarity
+- Complexity of the data
 
 2. Splitting training and test data
 
 To validate performance, the dataset is split into:
-Training set: Used to build the model.
-Test set: Used to test its prediction power.
+- Training set: Used to build the model.
+- Test set: Used to test its prediction power.
 This mimics real-world forecasting where future data is unknown.
 
 3. Evaluating the model performance
 
 We assess the accuracy of predictions using metrics like:
-MAE (Mean Absolute Error)
-RMSE (Root Mean Squared Error)
-MAPE (Mean Absolute Percentage Error)
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- MAPE (Mean Absolute Percentage Error)
 Visual comparison between predicted and actual values is also crucial.
 
-4. Plotting the predictions
-   
-5. Creating a forecast for future 
+4. Creating a forecast for future 
+
+After validation, the final model is trained on the full dataset to forecast future time periods.
 
 ## Time-series components
 
 A given time series is thought to consist of three systematic components including level, trend, seasonality, and one non-systematic component called noise. 
 
-
 ## ARIMA/ SARIMA Model Forecasting
 
 ***ARIMA = AR + I + MA***
 
-AR (Auto-Regressive): Uses past values to predict future values.
-
-I (Integrated): Differencing to make data stationary.
-
-MA (Moving Average): Models the error of past forecasts.
+- AR (Auto-Regressive): Uses past values to predict future values.
+- I (Integrated): Differencing to make data stationary.
+- MA (Moving Average): Models the error of past forecasts.
 
 ***SARIMA = ARIMA + Seasonality***
 
@@ -129,17 +116,16 @@ My analysis includes decomposition of the time series into trend, seasonality, a
 
 These models are defined by the following parameters:
 
-ARIMA(p, d, q)
-p: Number of lag observations (autoregressive terms).
-d: Degree of differencing (to remove trend and achieve stationarity).
-q: Size of moving average window.
+**ARIMA(p, d, q)**
+- p: Number of lag observations (autoregressive terms).
+- d: Degree of differencing (to remove trend and achieve stationarity).
+- q: Size of moving average window.
 
-SARIMA(p, d, q)(P, D, Q, s)
-Adds:
-P: Seasonal autoregressive order
-D: Seasonal differencing order
-Q: Seasonal moving average order
-s: Length of the seasonal cycle (e.g., 12 for monthly data with yearly seasonality)
+SARIMA(p, d, q)(P, D, Q, s) adds:
+- P: Seasonal autoregressive order
+- D: Seasonal differencing order
+- Q: Seasonal moving average order
+- s: Length of the seasonal cycle (e.g., 12 for monthly data with yearly seasonality)
 
 These components are generated using auto_arima() but I've used following measrues to fint-tune ht model for each genre.
 - ACF, PACF plots
