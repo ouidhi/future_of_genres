@@ -52,6 +52,7 @@ Tracks how music genres evolve and predicts future trends using Spotify + Google
 ## Project Workflow
 
 1. **Importing libraries, Data Loading and Preprocessing**
+
 Imported the dataset and set the date column as a datetime index.
 Selected relevant genre columns for analysis.
 
@@ -79,6 +80,7 @@ df.set_index('date', inplace= True)
 ```
 
 2. **Exploratory Data Analysis (EDA)**
+
 Visualized trends to identify patterns.
 Checked for missing data and handled anomalies.
 Extracted each genre as a Pandas Series object. 
@@ -100,6 +102,7 @@ indie = df['indie music']
 ```
 
 3. **For each genre, following steps were taken to create a 2 year forecast.**
+
 *I have shown the detailed process for the genre Hip-hop here but the same procedure id used for the other 8 genres.*
 
 i. Stationarity Check
