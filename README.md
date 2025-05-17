@@ -118,7 +118,6 @@ Output:
 ADF Statistic: -1.9786153985808255
 p-value: 0.2960274892539917
 
-Interpreation:
 the p-value is 0.296, which is much higher than 0.05, so we conclude that the 'hiphop' time series is non-stationary. This means that the mean, variance, or both are not constant over time, which can affect modeling techniques like ARIMA that assume stationarity.
 
 2. Seasonality Analysis
@@ -132,17 +131,50 @@ We decompose each genre's trend line to see if there's a repeating seasonal patt
 result = seasonal_decompose(hiphop, model='additive', period=12)  # for monthly data with yearly seasonality
 result.plot()
 plt.show()
+
+# Seasonal strength
+seasonal = result.seasonal
+resid = result.resid
+
+seasonal_strength = 1 - (np.var(resid.dropna()) / np.var((resid + seasonal).dropna()))
+print("Seasonal Strength:", seasonal_strength)
 ```
 ![hiphop_season](https://github.com/user-attachments/assets/8f9ae497-7519-4656-bed5-ba3e70b70dab)
 
+This plot shows the decomposition of the time series into Trend, Seasonality, and Residuals (Noise):
+Top plot:
+This is the original time series. There is a gradual decline in values from 2018 to 2024, suggesting a downward trend in hip hop popularity. 
+
+Trend:
+A clear, steady decline is visible from 2018 to around 2022, and then it flattens out. This tells us that the overall interest or metric is dropping over time.
+
+Seasonal:
+This part repeats with a regular yearly pattern, suggesting strong seasonal cycles—probably peaks and drops at specific months every year.
+
+Residuals:
+These are the random fluctuations left after removing the trend and seasonality. They're spread relatively evenly around zero, which is good—it means the model captured the trend and seasonality reasonably well.
+
+Seasonal strength is a quantitative measure of how strong the seasonal component is in out data.
+
+If seasonality is strong, seasonal_strength close to 1.
+If seasonality is weak or absent, seasonal_strength close to 0.
+
+Here, it is 0.417 which is close to 0. Hence, there is weak seasonality. 
 
 3. Train-Test Split
 Split data into training (all data except last 12 months) and testing sets (last 12 months).
 This allows for evaluation of model performance on unseen data.
 
-4. Model Selection: Auto ARIMA
+```python
+train = hiphop.iloc[:-12]
+test = hiphop.iloc[-12:]
+```
+
+4. Model Selection using auto_arima  
 Utilized pmdarima.auto_arima to automatically select optimal p, d, q parameters.
 Balanced between underfitting and overfitting.
+
+Learn more about ARIMA/ SARIMA modelling 
 
 5. SARIMA Modeling and Forecasting
 Fitted SARIMA model using selected parameters.
