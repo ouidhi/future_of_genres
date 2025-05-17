@@ -1,4 +1,4 @@
-# # Future of Music Genre Trends: Time Series Forecasting
+# Future of Music Genre Trends: Time Series Forecasting
 
 ## Overview
 This project uses Google Trends data to forecast the popularity trends of 9 music genres from 2025 to 2026. Using SARIMA modeling, I aim to predict which genres will rise or fall in popularity, offering strategic insights for artists, record labels, and music marketers.
