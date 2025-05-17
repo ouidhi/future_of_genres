@@ -103,9 +103,10 @@ indie = df['indie music']
 
 3. **For each genre, following steps were taken to create a 2 year forecast.**
 
-*I have shown the detailed process for the genre Hip-hop here but the same procedure id used for the other 8 genres.*
+*I have shown the detailed process for the genre Hip-hop here but the same procedure is used for the other 8 genres.*
 
-i. Stationarity Check
+**i. Stationarity Check**
+
 Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
 Stationarity is necessary for ARIMA/SARIMA models to perform well.
 
@@ -124,7 +125,8 @@ p-value: 0.2960274892539917
 
 the p-value is 0.296, which is much higher than 0.05, so we conclude that the 'hiphop' time series is non-stationary. This means that the mean, variance, or both are not constant over time, which can affect modeling techniques like ARIMA that assume stationarity.
 
-ii. Seasonality Analysis
+**ii. Seasonality Analysis**
+
 Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
 Seasonality justifies the choice of SARIMA over simpler ARIMA.
 We decompose each genre's trend line to see if there's a repeating seasonal pattern. 
@@ -165,7 +167,8 @@ If seasonality is weak or absent, seasonal_strength close to 0.
 
 Here, it is 0.417 which is close to 0. Hence, there is weak seasonality. 
 
-iii. Train-Test Split
+**iii. Train-Test Split**
+
 Split data into training (all data except last 12 months) and testing sets (last 12 months).
 This allows for evaluation of model performance on unseen data.
 
@@ -174,20 +177,113 @@ train = hiphop.iloc[:-12]
 test = hiphop.iloc[-12:]
 ```
 
-iv. Model Selection using auto_arima  
+**iv. Model Selection using auto_arima**  
+
 Utilized pmdarima.auto_arima to automatically select optimal p, d, q parameters.
-Balanced between underfitting and overfitting.
 
-Learn more about ARIMA/ SARIMA modelling 
+Learn more about ARIMA/ SARIMA modelling.
 
-v. SARIMA Modeling and Forecasting
+```python
+# chooses the best values for p,d,q 
+auto_model = auto_arima(train, seasonal=True, m=12, trace=True)
+print(auto_model.summary())
+```
+
+Output:
+Best model:  ARIMA(1,1,1)(1,0,1)[12] intercept
+
+- **ARIMA(1,1,1)** → The non-seasonal part of the model has:
+- **Seasonal Order (1, 0, 1, 12)** → The seasonal part of the model has:
+
+I will now fit the SARIMA model using these parameters.
+
+**v. SARIMA Modeling and Forecasting**
+
 Fitted SARIMA model using selected parameters.
 Forecasted test set and evaluated model accuracy.
 Produced final forecast for 24 months ahead (2025-2026).
 
-vi. Model Evaluation
-Used Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) to evaluate test forecasts.
+```python
+# fitting a SARIMA model by adjusting the parameters by evaluation the model   
+model = SARIMAX(train, 
+                order=(1, 1, 1), # (p, d, q)
+                seasonal_order=(1, 0, 1, 12), # (P, D, Q, m)
+                enforce_stationarity=False, 
+                enforce_invertibility=False)
+
+model_fit = model.fit()
+print(model_fit.summary())
+
+# forecasting the next 12 months using the trained model.
+forecast = model_fit.get_forecast(steps=12)
+hiphop_forecast = forecast.predicted_mean
+conf_int = forecast.conf_int()
+
+# creating a future date index for plotting the forecast.
+future_dates = pd.date_range(start=train.index[-1] + pd.DateOffset(months=1), periods=12, freq='MS')
+
+# plotting the historical data, forecasted values, and the confidence intervals
+plt.figure(figsize=(12, 5))
+plt.plot(train, label='Historical')
+plt.plot(future_dates, hiphop_forecast, label='Forecast', color='pink')
+plt.fill_between(future_dates, conf_int.iloc[:, 0], conf_int.iloc[:, 1], color='pink', alpha=0.2)
+plt.title('SARIMA Forecast')
+plt.legend()
+plt.tight_layout()
+plt.show()
+```
+Output:
+                                     SARIMAX Results                                      
+==========================================================================================
+Dep. Variable:                      hip hop music   No. Observations:                   72
+Model:             SARIMAX(1, 1, 1)x(1, 0, 1, 12)   Log Likelihood                 -51.755
+Date:                            Sat, 17 May 2025   AIC                            113.510
+Time:                                    14:32:24   BIC                            123.726
+Sample:                                01-01-2018   HQIC                           117.480
+                                     - 12-01-2023                                         
+Covariance Type:                              opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ar.L1          0.5954      0.164      3.640      0.000       0.275       0.916
+ma.L1         -1.0000    182.795     -0.005      0.996    -359.271     357.271
+ar.S.L12       0.7872      0.083      9.475      0.000       0.624       0.950
+ma.S.L12      -0.8075      0.417     -1.938      0.053      -1.624       0.009
+sigma2         0.2726     49.852      0.005      0.996     -97.435      97.980
+===================================================================================
+Ljung-Box (L1) (Q):                   0.05   Jarque-Bera (JB):                 1.27
+Prob(Q):                              0.82   Prob(JB):                         0.53
+Heteroskedasticity (H):               0.85   Skew:                             0.36
+Prob(H) (two-sided):                  0.73   Kurtosis:                         2.90
+===================================================================================
+
+![image](https://github.com/user-attachments/assets/15b263f1-eb7e-47e5-8d21-536ebe7dc0d4)
+
+
+**vi. Model Evaluation**
+
+Used Mean Absolute Error (MAE), Root Mean Squared Error (RMSE) and Mean Absolute Percentage Error (MAPE) to evaluate test forecasts. Also using the Ljung-Box p-value, Jarque-Bera p-value, the stationarity and seasonality checks to fine-tune the model.  
+
+```python
+# Actual and predicted values
+y_true = test
+y_pred = forecast.predicted_mean
+
+mae = mean_absolute_error(y_true, y_pred)
+rmse = np.sqrt(mean_squared_error(y_true, y_pred))
+mape = np.mean(np.abs((y_true - y_pred) / y_true)) * 100
+
+print(f"MAE: {mae:.2f}")
+print(f"RMSE: {rmse:.2f}")
+print(f"MAPE: {mape:.2f}%")
+
+plt.plot(test.index, test, label='Actual')
+plt.plot(test.index, forecast.predicted_mean, label='Forecast')
+plt.legend()
+```
+
 Ensured model reliability before long-term forecasting.
+
 
 ## Why SARIMA?
 
