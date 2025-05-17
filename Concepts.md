@@ -44,6 +44,7 @@ After analyzing past data, the next goal is to use that information to forecast 
 
 
 1. Selecting a model
+
 Different Kinds of Time Series Forecasting Models
 
 Here are a few common approaches:
@@ -97,11 +98,15 @@ A given time series is thought to consist of three systematic components includi
 ## ARIMA/ SARIMA Model Forecasting
 
 ***ARIMA = AR + I + MA***
+
 AR (Auto-Regressive): Uses past values to predict future values.
+
 I (Integrated): Differencing to make data stationary.
+
 MA (Moving Average): Models the error of past forecasts.
 
 ***SARIMA = ARIMA + Seasonality***
+
 SARIMA includes seasonal versions of AR, I, and MA components.
 
 In this project, I’m analyzing how music genre popularity evolves over time using data from sources like Spotify and Google Trends. After exploring multiple time series forecasting methods, I selected SARIMA (Seasonal AutoRegressive Integrated Moving Average) as the primary model due to following reasons:
@@ -112,11 +117,11 @@ Music consumption is heavily influenced by the time of year:
 Pop often dominates in summer
 Indie and alternative trends rise in fall
 
-4. Supports Small-to-Medium Datasets
+2. Supports Small-to-Medium Datasets
 
 My genre-level popularity data spans 8-10 years on a monthly basis. That’s not huge — and deep learning models often underperform without large datasets.
 
-5. Aligns with Decomposed Time Series
+3. Aligns with Decomposed Time Series
 
 My analysis includes decomposition of the time series into trend, seasonality, and noise. SARIMA naturally incorporates these components within its structure, making it a seamless next step in the modeling pipeline.
 
