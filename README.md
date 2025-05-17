@@ -51,7 +51,7 @@ Tracks how music genres evolve and predicts future trends using Spotify + Google
 
 ## Project Workflow
 
-1. Importing libraries, Data Loading and Preprocessing
+1. **Importing libraries, Data Loading and Preprocessing**
 Imported the dataset and set the date column as a datetime index.
 Selected relevant genre columns for analysis.
 
@@ -78,7 +78,7 @@ df['date'] = pd.to_datetime(df['date'])
 df.set_index('date', inplace= True)
 ```
 
-2. Exploratory Data Analysis (EDA)
+2. **Exploratory Data Analysis (EDA)**
 Visualized trends to identify patterns.
 Checked for missing data and handled anomalies.
 Extracted each genre as a Pandas Series object. 
@@ -99,9 +99,10 @@ latin = df['latin music']
 indie = df['indie music']
 ```
 
-For each genre, following steps were taken to create a 2 year forecast. I have shown the detailed process for hte genre Hip-hop here but the same procedure id used for the other 8 genres.
+3. **For each genre, following steps were taken to create a 2 year forecast.**
+*I have shown the detailed process for the genre Hip-hop here but the same procedure id used for the other 8 genres.*
 
-1. Stationarity Check
+i. Stationarity Check
 Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
 Stationarity is necessary for ARIMA/SARIMA models to perform well.
 
@@ -120,7 +121,7 @@ p-value: 0.2960274892539917
 
 the p-value is 0.296, which is much higher than 0.05, so we conclude that the 'hiphop' time series is non-stationary. This means that the mean, variance, or both are not constant over time, which can affect modeling techniques like ARIMA that assume stationarity.
 
-2. Seasonality Analysis
+ii. Seasonality Analysis
 Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
 Seasonality justifies the choice of SARIMA over simpler ARIMA.
 We decompose each genre's trend line to see if there's a repeating seasonal pattern. 
@@ -161,7 +162,7 @@ If seasonality is weak or absent, seasonal_strength close to 0.
 
 Here, it is 0.417 which is close to 0. Hence, there is weak seasonality. 
 
-3. Train-Test Split
+iii. Train-Test Split
 Split data into training (all data except last 12 months) and testing sets (last 12 months).
 This allows for evaluation of model performance on unseen data.
 
@@ -170,18 +171,18 @@ train = hiphop.iloc[:-12]
 test = hiphop.iloc[-12:]
 ```
 
-4. Model Selection using auto_arima  
+iv. Model Selection using auto_arima  
 Utilized pmdarima.auto_arima to automatically select optimal p, d, q parameters.
 Balanced between underfitting and overfitting.
 
 Learn more about ARIMA/ SARIMA modelling 
 
-5. SARIMA Modeling and Forecasting
+v. SARIMA Modeling and Forecasting
 Fitted SARIMA model using selected parameters.
 Forecasted test set and evaluated model accuracy.
 Produced final forecast for 24 months ahead (2025-2026).
 
-6. Model Evaluation
+vi. Model Evaluation
 Used Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) to evaluate test forecasts.
 Ensured model reliability before long-term forecasting.
 
