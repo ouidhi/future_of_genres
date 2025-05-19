@@ -14,11 +14,9 @@ The first step is always visual. By plotting the time series, we can spot overal
 
 Time series data is often composed of several distinct components:
 
-Trend: The long-term progression (upward or downward movement).
-
-Seasonality: Cyclical patterns that repeat at regular intervals (daily, monthly, yearly, etc.).
-
-Residual/Noise: The random variation or error after removing trend and seasonality.
+- **Trend**: The long-term progression (upward or downward movement).
+- **Seasonality**: Cyclical patterns that repeat at regular intervals (daily, monthly, yearly, etc.).
+- **Residual/Noise**: The random variation or error after removing trend and seasonality.
 
 Decomposition helps separate these components to better understand underlying structures in the data.
 
@@ -26,11 +24,31 @@ Decomposition helps separate these components to better understand underlying st
 
 A stationary time series has constant statistical properties (mean, variance) over time. Most forecasting models (like ARIMA) assume the data is stationary.
 
-We check for stationarity using:
+I've checked for stationarity using:
 
-Rolling statistics (moving average, variance)
+Dickey-Fuller test (ADF test)- It is a statistical test used to check whether a time series is stationary — meaning its statistical properties like mean, variance, and autocorrelation don’t change over time.
 
-Dickey-Fuller test (ADF test)
+*Hypotheses in ADF Test*
+
+- Null Hypothesis (H₀): The time series has a unit root → it's non-stationary.
+- Alternative Hypothesis (H₁): The time series does not have a unit root → it's stationary.
+
+*ADF Test Output & Interpretation*
+
+```python
+result = adfuller(genre_series)
+
+print("ADF Statistic:", result[0])
+print("p-value:", result[1])
+```
+We get two main things:
+- ADF Statistic – A test statistic that’s compared to critical values.
+- p-value – Tells you whether to reject the null hypothesis.
+
+Interpretation of the p-value
+- p-value < 0.05 → Reject the null hypothesis → Stationary series.
+- p-value > 0.05 → Fail to reject the null → Non-stationary series.
+
 
 If the series is not stationary, techniques like differencing, log transformation, or seasonal adjustment are used to make it so.
 
