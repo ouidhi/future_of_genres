@@ -53,8 +53,8 @@ Tracks how music genres evolve and predicts future trends using Spotify + Google
 
 1. **Importing libraries, Data Loading and Preprocessing**
 
-Imported the dataset and set the date column as a datetime index.
-Selected relevant genre columns for analysis.
+- Imported the dataset and set the date column as a datetime index.
+- Selected relevant genre columns for analysis.
 
 ```python
 import pandas as pd
@@ -81,9 +81,9 @@ df.set_index('date', inplace= True)
 
 2. **Exploratory Data Analysis (EDA)**
 
-Visualized trends to identify patterns.
-Checked for missing data and handled anomalies.
-Extracted each genre as a Pandas Series object. 
+- First 5 records. 
+- Checked for missing data and handled anomalies.
+- Extracted each genre as a Pandas Series object. 
 
 ```python
 print(f'Top 5 rows:\n{df.head()}\n')
@@ -107,8 +107,8 @@ indie = df['indie music']
 
 **i. Stationarity Check**
 
-Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
-Stationarity is necessary for ARIMA/SARIMA models to perform well.
+- Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
+- Stationarity is necessary for ARIMA/SARIMA models to perform well.
 
 Learn more about stationaity in time series. 
 
@@ -120,15 +120,17 @@ print("ADF Statistic:", result[0])
 print("p-value:", result[1])
 ```
 Output:
-ADF Statistic: -1.9786153985808255
-p-value: 0.2960274892539917
+- ADF Statistic: -1.9786153985808255
+- p-value: 0.2960274892539917
 
 the p-value is 0.296, which is much higher than 0.05, so we conclude that the 'hiphop' time series is non-stationary. This means that the mean, variance, or both are not constant over time, which can affect modeling techniques like ARIMA that assume stationarity.
 
 **ii. Seasonality Analysis**
 
 Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
+
 Seasonality justifies the choice of SARIMA over simpler ARIMA.
+
 We decompose each genre's trend line to see if there's a repeating seasonal pattern. 
 - If strong seasonality: we model it with SARIMA.
 - If weak/no seasonality: we skip it and use ARIMA.
@@ -148,28 +150,30 @@ print("Seasonal Strength:", seasonal_strength)
 ![hiphop_season](https://github.com/user-attachments/assets/8f9ae497-7519-4656-bed5-ba3e70b70dab)
 
 This plot shows the decomposition of the time series into Trend, Seasonality, and Residuals (Noise):
-Top plot:
+
+**Top plot:**
 This is the original time series. There is a gradual decline in values from 2018 to 2024, suggesting a downward trend in hip hop popularity. 
 
-Trend:
+**Trend:**
 A clear, steady decline is visible from 2018 to around 2022, and then it flattens out. This tells us that the overall interest or metric is dropping over time.
 
-Seasonal:
+**Seasonal:**
 This part repeats with a regular yearly pattern, suggesting strong seasonal cycles—probably peaks and drops at specific months every year.
 
-Residuals:
+**Residuals:**
 These are the random fluctuations left after removing the trend and seasonality. They're spread relatively evenly around zero, which is good—it means the model captured the trend and seasonality reasonably well.
 
 Seasonal strength is a quantitative measure of how strong the seasonal component is in out data.
 
-If seasonality is strong, seasonal_strength close to 1.
-If seasonality is weak or absent, seasonal_strength close to 0.
+- If seasonality is strong, seasonal_strength close to 1.
+- If seasonality is weak or absent, seasonal_strength close to 0.
 
 Here, it is 0.417 which is close to 0. Hence, there is weak seasonality. 
 
 **iii. Train-Test Split**
 
 Split data into training (all data except last 12 months) and testing sets (last 12 months).
+
 This allows for evaluation of model performance on unseen data.
 
 ```python
@@ -188,8 +192,8 @@ Learn more about ARIMA/ SARIMA modelling.
 auto_model = auto_arima(train, seasonal=True, m=12, trace=True)
 print(auto_model.summary())
 ```
-
 Output:
+
 Best model:  ARIMA(1,1,1)(1,0,1)[12] intercept
 
 - **ARIMA(1,1,1)** → The non-seasonal part of the model has:
@@ -199,8 +203,8 @@ I will now fit the SARIMA model using these parameters.
 
 **v. SARIMA Modeling and Forecasting**
 
-Fitted SARIMA model using selected parameters.
-Forecasted test set and evaluated model accuracy.
+- Fitted SARIMA model using selected parameters.
+- Forecasted test set and evaluated model accuracy.
 
 ```python
 # fitting a SARIMA model by adjusting the parameters by evaluation the model   
@@ -240,7 +244,9 @@ Output:
 
 **vi. Model Evaluation**
 
-Used Mean Absolute Error (MAE), Root Mean Squared Error (RMSE) and Mean Absolute Percentage Error (MAPE) to evaluate test forecasts. Also using the Ljung-Box p-value, Jarque-Bera p-value, the stationarity and seasonality checks to fine-tune the model.  
+Used Mean Absolute Error (MAE), Root Mean Squared Error (RMSE) and Mean Absolute Percentage Error (MAPE) to evaluate test forecasts. 
+
+Also using the Ljung-Box p-value, Jarque-Bera p-value, the stationarity and seasonality checks to fine-tune the model.  
 
 ```python
 # Actual and predicted values
@@ -263,6 +269,7 @@ plt.legend()
 Ensured model reliability before long-term forecasting.
 
 **vii. Final 2 year forecast**
+
 Produced final forecast for 24 months ahead (2025-2026).
 
 ```python
@@ -300,6 +307,8 @@ plt.show()
 
 The dataset contains 83 monthly data points — enough to capture yearly seasonality.
 SARIMA explicitly models both seasonal and non-seasonal components, critical for music trends that often show cyclic interest (e.g., seasonal releases, festival seasons).
+
 Other models like ARIMA don’t account for seasonality as effectively.
+
 Facebook Prophet is an alternative but SARIMA offers more statistical control and interpretability
 
