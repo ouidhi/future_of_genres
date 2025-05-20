@@ -10,7 +10,7 @@ Time series analysis is the process of examining time-ordered data points to ide
 
 The first step is always visual. By plotting the time series, we can spot overall patterns, trends, and potential anomalies. This step helps determine whether the data has a visible upward/downward trend, seasonal effects, or outliers.
 
-2. Decomposition - trend, seasonality, noise/ residual
+2. Seasonality using decomposition
 
 Time series data is often composed of several distinct components:
 
@@ -19,6 +19,26 @@ Time series data is often composed of several distinct components:
 - **Residual/Noise**: The random variation or error after removing trend and seasonality.
 
 Decomposition helps separate these components to better understand underlying structures in the data.
+
+I've also used seasonal strength to back up the results. **Seasonal strength** tells us how much of the variability in our time series can be explained by its seasonal component (e.g., daily, weekly, or yearly patterns).
+
+If seasonal strength is:
+- Close to 1 → Strong, clear seasonal pattern
+- Close to 0 → Weak or no seasonal pattern
+
+```python
+result = seasonal_decompose(genre_series, model='additive', period=12)  # for monthly data with yearly seasonality
+result.plot()
+plt.show()
+
+# Seasonal strength
+seasonal = result.seasonal
+resid = result.resid
+
+seasonal_strength = 1 - (np.var(resid.dropna()) / np.var((resid + seasonal).dropna()))
+print("Seasonal Strength:", seasonal_strength)
+```
+
 
 3. Checking if data is stationary
 
@@ -50,9 +70,8 @@ Interpretation of the p-value
 - p-value > 0.05 → Fail to reject the null → Non-stationary series.
 
 
-If the series is not stationary, techniques like differencing, log transformation, or seasonal adjustment are used to make it so.
+If the series is not stationary, techniques like differencing, log transformation, or seasonal adjustment are commonly applied to induce stationarity. While I'm using auto_arima() to automatically determine the optimal values for p, d, q, the results from the ADF test can be a valuable reference — especially for selecting the appropriate differencing term d. Since auto_arima() uses statistical heuristics and may not always capture the true dynamics of the data, it's good practice to validate or tweak its suggestions based on domain knowledge and stationarity test results like ADF. 
 
-4. Check seasonality
 
 ## Time series forecasting
 
