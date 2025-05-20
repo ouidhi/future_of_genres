@@ -185,6 +185,13 @@ test = hiphop.iloc[-12:]
 
 Utilized pmdarima.auto_arima to automatically select optimal p, d, q parameters.
 
+To improve the accuracy and reliability of the auto_arima() model selection, I first conducted a stationarity check using the Augmented Dickey-Fuller (ADF) test, and calculated the seasonal strength of the time series. These steps provided critical insights into the nature of the data — particularly the presence of a unit root (non-stationarity) and the influence of seasonal patterns.
+
+While auto_arima() is a powerful tool for automating the selection of (p, d, q) and seasonal components, it can sometimes overfit or underfit the model — especially when the data has borderline stationarity or ambiguous seasonality. By using the ADF results to validate or adjust the differencing term d, and leveraging the seasonal strength to assess the need for seasonal parameters, I was able to fine-tune the model more effectively.
+
+This hybrid approach — combining automated selection with domain-aware diagnostics — helps ensure the final ARIMA model is both statistically sound and well-suited to the structure of the data.
+
+
 Learn more about ARIMA/ SARIMA modelling.
 
 ```python
