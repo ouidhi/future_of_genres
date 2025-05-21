@@ -139,23 +139,19 @@ We assess the accuracy of predictions using metrics like:
 > **Forecast vs Actual Plot**
   - Visual comparison between the model’s forecast and the actual values is essential for intuitive evaluation.
 
-Visual comparison between predicted and actual values is also crucial.
-
 **4. Creating a forecast for future**
 
-After validation, the final model is trained on the full dataset to forecast future time periods.
-
-## Time-series components
-
-A given time series is thought to consist of three systematic components including level, trend, seasonality, and one non-systematic component called noise. 
+After validation, the final model is trained on the full dataset to forecast future time periods. These factors are also used to tweak the parameters of the model. 
 
 ## ARIMA/ SARIMA Model Forecasting
 
 ***ARIMA = AR + I + MA***
+ARIMA stands for AutoRegressive Integrated Moving Average — a classic and powerful time series forecasting method.
 
-- AR (Auto-Regressive): Uses past values to predict future values.
-- I (Integrated): Differencing to make data stationary.
-- MA (Moving Average): Models the error of past forecasts.
+It's built on three main components:
+- AR (AutoRegressive): Uses the relationship between an observation and a number of lagged observations (i.e., past values).
+- I (Integrated): Applies differencing to remove trends and make the time series stationary (where the mean and variance stay constant over time).
+- MA (Moving Average): Models the error of the past forecast as part of the prediction equation.
 
 ***SARIMA = ARIMA + Seasonality***
 
@@ -166,8 +162,8 @@ In this project, I’m analyzing how music genre popularity evolves over time us
 **1. Captures Seasonality in Music Trends**
 
 Music consumption is heavily influenced by the time of year:
-Pop often dominates in summer
-Indie and alternative trends rise in fall
+- Pop often dominates in summer
+- Indie and alternative trends rise in fall
 
 **2. Supports Small-to-Medium Datasets**
 
@@ -192,11 +188,10 @@ SARIMA(p, d, q)(P, D, Q, s) adds:
 - Q: Seasonal moving average order
 - s: Length of the seasonal cycle (e.g., 12 for monthly data with yearly seasonality)
 
-These components are generated using auto_arima() but I've used following measrues to fint-tune ht model for each genre.
-- ACF, PACF plots
+These components are generated using auto_arima() but I've used following measrues to fine-tune the model for each genre.
 - Seasonality & seasonality strength
-- Ljung-Box p-value
-- Jarque-Bera p-value 
+- Stationarity (ADF)
+- Model Evaluation - see above 
 
 Sources
 
