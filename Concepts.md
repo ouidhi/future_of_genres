@@ -153,45 +153,61 @@ It's built on three main components:
 - I (Integrated): Applies differencing to remove trends and make the time series stationary (where the mean and variance stay constant over time).
 - MA (Moving Average): Models the error of the past forecast as part of the prediction equation.
 
+ARIMA(p, d, q) includes:
+- p: Number of autoregressive terms
+- d: Number of differences needed to make the series stationary
+- q: Number of lagged forecast errors (moving average terms)
+
 ***SARIMA = ARIMA + Seasonality***
 
-SARIMA includes seasonal versions of AR, I, and MA components.
+SARIMA (Seasonal ARIMA) is an extension of ARIMA that accounts for seasonality — repeating patterns that occur at regular intervals (monthly, quarterly, etc.).
+
+SARIMA(p, d, q)(P, D, Q, s) adds:
+P: Seasonal autoregressive terms
+D: Seasonal differencing (removing seasonal trends)
+Q: Seasonal moving average terms
+s: Length of the seasonal cycle (e.g., 12 for monthly data with yearly cycles.
+
+**Why SARIMA?**
 
 In this project, I’m analyzing how music genre popularity evolves over time using data from sources like Spotify and Google Trends. After exploring multiple time series forecasting methods, I selected SARIMA (Seasonal AutoRegressive Integrated Moving Average) as the primary model due to following reasons:
 
-**1. Captures Seasonality in Music Trends**
+- Music genre popularity isn't random — it often has a seasonal rhythm:
+  - Pop spikes in the summer
+  - Acoustic/indie gains traction in autumn
+- EDM and hip-hop surge in festival and party seasons
+- This seasonality is clearly visible in the decomposition plots, and quantified using seasonal strength. SARIMA is perfect for this kind of data because:
+  - It captures both long-term trends and seasonal fluctuations
+  - It's suitable for moderate-sized datasets
+  - It works well after decomposition and stationarity checks
 
-Music consumption is heavily influenced by the time of year:
-- Pop often dominates in summer
-- Indie and alternative trends rise in fall
+**How I used SARIMA?**
 
-**2. Supports Small-to-Medium Datasets**
+To train and forecast with SARIMA:
+- I used historical data on genre popularity (monthly)
+- Checked for seasonality and stationarity
+- Split the data into training and test datasets.
+- Used auto_arima() for parameter suggestions
+- Fine-tuned the model based on seasonal strength, ADF test, and residual diagnostics.
+- Then I trained the SARIMA model like this:
 
-My genre-level popularity data spans 8-10 years on a monthly basis. That’s not huge — and deep learning models often underperform without large datasets.
+```python
+model = SARIMAX(train, 
+                order=(1, 1, 1), # (p, d, q)
+                seasonal_order=(1, 0, 1, 12), # (P, D, Q, m)
+                enforce_stationarity=False, 
+                enforce_invertibility=False)
 
-**3. Aligns with Decomposed Time Series**
+model_fit = model.fit()
+print(model_fit.summary())
 
-My analysis includes decomposition of the time series into trend, seasonality, and noise. SARIMA naturally incorporates these components within its structure, making it a seamless next step in the modeling pipeline.
-
-### Components/ parameters of SARIMA 
-
-These models are defined by the following parameters:
-
-**ARIMA(p, d, q)**
-- p: Number of lag observations (autoregressive terms).
-- d: Degree of differencing (to remove trend and achieve stationarity).
-- q: Size of moving average window.
-
-SARIMA(p, d, q)(P, D, Q, s) adds:
-- P: Seasonal autoregressive order
-- D: Seasonal differencing order
-- Q: Seasonal moving average order
-- s: Length of the seasonal cycle (e.g., 12 for monthly data with yearly seasonality)
-
-These components are generated using auto_arima() but I've used following measrues to fine-tune the model for each genre.
-- Seasonality & seasonality strength
-- Stationarity (ADF)
-- Model Evaluation - see above 
+# forecasting the next 12 months using the trained model.
+forecast = model_fit.get_forecast(steps=12)
+hiphop_forecast = forecast.predicted_mean
+conf_int = forecast.conf_int()
+```
+- Evaluated the model
+- Created the unseen forecast for the next 2 years. 
 
 Sources
 
