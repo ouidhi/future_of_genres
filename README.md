@@ -110,7 +110,7 @@ indie = df['indie music']
 - Conducted Augmented Dickey-Fuller (ADF) tests on each genre's time series.
 - Stationarity is necessary for ARIMA/SARIMA models to perform well.
 
-Learn more about stationaity in time series. 
+[Learn more about Stationarity.](Concepts.md)
 
 ```python
 # Stationarity check 
@@ -208,7 +208,7 @@ I will now fit the SARIMA model using these parameters.
 
 **v. SARIMA Modeling and Forecasting**
 
-[Learn more about SARIMA.](Concepts.md)
+[Learn more about SARIMA.](Concepts.md#sarima-model-forecasting)
 
 - Fitted SARIMA model using selected parameters.
 - Forecasted test set and evaluated model accuracy.
