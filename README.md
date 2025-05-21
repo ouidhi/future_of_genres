@@ -127,13 +127,9 @@ the p-value is 0.296, which is much higher than 0.05, so we conclude that the 'h
 
 **ii. Seasonality Analysis**
 
-Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
+- Used seasonal decomposition to identify seasonal trends (e.g., yearly cycles).
+- Seasonality justifies the choice of SARIMA over simpler ARIMA.
 
-Seasonality justifies the choice of SARIMA over simpler ARIMA.
-
-We decompose each genre's trend line to see if there's a repeating seasonal pattern. 
-- If strong seasonality: we model it with SARIMA.
-- If weak/no seasonality: we skip it and use ARIMA.
 
 ```python
 result = seasonal_decompose(hiphop, model='additive', period=12)  # for monthly data with yearly seasonality
@@ -168,7 +164,9 @@ Seasonal strength is a quantitative measure of how strong the seasonal component
 - If seasonality is strong, seasonal_strength close to 1.
 - If seasonality is weak or absent, seasonal_strength close to 0.
 
-Here, it is 0.417 which is close to 0. Hence, there is weak seasonality. 
+Here, it is 0.417 which is close to 0. Hence, there is weak seasonality but it is present. 
+
+Learn more about Seasonality. 
 
 **iii. Train-Test Split**
 
