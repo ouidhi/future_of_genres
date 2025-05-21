@@ -176,10 +176,10 @@ SARIMA(p, d, q)(P, D, Q, s) adds:
 - Same as ARIMA. 
 
 🟣 Seasonal Part: (P, D, Q, s)
-P (Seasonal AutoRegressive): How many seasonal lags (e.g., 12 months ago) should influence the current value?
-D (Seasonal Differencing): How many times should we remove seasonal trends (like year-over-year patterns)?
-Q (Seasonal Moving Average): How many past seasonal errors should be included?
-s (Seasonal Period): The length of the seasonal cycle (e.g., 12 for yearly cycles in monthly data).
+- P (Seasonal AutoRegressive): How many seasonal lags (e.g., 12 months ago) should influence the current value?
+- D (Seasonal Differencing): How many times should we remove seasonal trends (like year-over-year patterns)?
+- Q (Seasonal Moving Average): How many past seasonal errors should be included?
+- s (Seasonal Period): The length of the seasonal cycle (e.g., 12 for yearly cycles in monthly data).
 
 
 **Why SARIMA?**
