@@ -6,7 +6,7 @@ Time series analysis = understanding the past.
 
 Time series analysis is the process of examining time-ordered data points to identify patterns, trends, and other structures that can inform forecasting models. Understanding past behavior helps in constructing better predictive models.
 
-1. Plotting the series
+###1. Plotting the series
 
 The first step is always visual. By plotting the time series, we can spot overall patterns, trends, and potential anomalies. This step helps determine whether the data has a visible upward/downward trend, seasonal effects, or outliers.
 
