@@ -166,7 +166,7 @@ Seasonal strength is a quantitative measure of how strong the seasonal component
 
 Here, it is 0.417 which is close to 0. Hence, there is weak seasonality but it is present. 
 
-Learn more about Seasonality. 
+[Learn more about Seasonality.](Concepts.md)
 
 **iii. Train-Test Split**
 
@@ -207,6 +207,8 @@ Best model:  ARIMA(1,1,1)(1,0,1)[12] intercept
 I will now fit the SARIMA model using these parameters.
 
 **v. SARIMA Modeling and Forecasting**
+
+[Learn more about SARIMA.](Concepts.md)
 
 - Fitted SARIMA model using selected parameters.
 - Forecasted test set and evaluated model accuracy.
