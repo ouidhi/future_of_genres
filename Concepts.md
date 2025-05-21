@@ -143,9 +143,10 @@ We assess the accuracy of predictions using metrics like:
 
 After validation, the final model is trained on the full dataset to forecast future time periods. These factors are also used to tweak the parameters of the model. 
 
-## ARIMA/ SARIMA Model Forecasting
+## ARIMA Model Forecasting
 
-***ARIMA = AR + I + MA***
+*ARIMA = AR + I + MA*
+
 ARIMA stands for AutoRegressive Integrated Moving Average — a classic and powerful time series forecasting method.
 
 It's built on three main components:
@@ -154,19 +155,32 @@ It's built on three main components:
 - MA (Moving Average): Models the error of the past forecast as part of the prediction equation.
 
 ARIMA(p, d, q) includes:
-- p: Number of autoregressive terms
-- d: Number of differences needed to make the series stationary
-- q: Number of lagged forecast errors (moving average terms)
+- p (AutoRegressive): How many past values should influence the current value?
+- d (Integrated): How many times should we difference the data to make it stationary (i.e., stable over time)?
+- q (Moving Average): How many past forecast errors should we include?
 
-***SARIMA = ARIMA + Seasonality***
+## SARIMA Model Forecasting
+
+*SARIMA = ARIMA + Seasonality*
 
 SARIMA (Seasonal ARIMA) is an extension of ARIMA that accounts for seasonality — repeating patterns that occur at regular intervals (monthly, quarterly, etc.).
 
+Most real-world time series are not only influenced by their recent past (ARIMA), but also by seasonal patterns — like how certain genres spike during holidays or how moods change by season (e.g., upbeat pop in summer, chill indie in fall).
+
+SARIMA captures both:
+- Short-term trends: "What just happened?"
+- Seasonal cycles: "What usually happens this time of year?"
+
 SARIMA(p, d, q)(P, D, Q, s) adds:
-P: Seasonal autoregressive terms
-D: Seasonal differencing (removing seasonal trends)
-Q: Seasonal moving average terms
-s: Length of the seasonal cycle (e.g., 12 for monthly data with yearly cycles.
+🔵 Non-Seasonal Part: ARIMA(p, d, q)
+- Same as ARIMA. 
+
+🟣 Seasonal Part: (P, D, Q, s)
+P (Seasonal AutoRegressive): How many seasonal lags (e.g., 12 months ago) should influence the current value?
+D (Seasonal Differencing): How many times should we remove seasonal trends (like year-over-year patterns)?
+Q (Seasonal Moving Average): How many past seasonal errors should be included?
+s (Seasonal Period): The length of the seasonal cycle (e.g., 12 for yearly cycles in monthly data).
+
 
 **Why SARIMA?**
 
