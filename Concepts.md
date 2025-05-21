@@ -86,12 +86,12 @@ After analyzing past data, the next goal is to use that information to forecast 
 
 Different Kinds of Time Series Forecasting Models:
 
-- Naive Forecasting: Assumes future values equal the last observed value.
-- Moving Average / Exponential Smoothing: Averages out noise, gives weight to recent data.
-- ARIMA (AutoRegressive Integrated Moving Average): Good for non-seasonal data.
-- SARIMA (Seasonal ARIMA): Extension of ARIMA for seasonal datasets.
-- Prophet (by Facebook): Handles missing data, seasonality, and holidays.
-- LSTM (Neural Networks): For deep learning approaches to time series.
+- **Naive Forecasting**: Assumes future values equal the last observed value.
+- **Moving Average / Exponential Smoothing**: Averages out noise, gives weight to recent data.
+- **ARIMA (AutoRegressive Integrated Moving Average)**: Good for non-seasonal data.
+- **SARIMA (Seasonal ARIMA)**: Extension of ARIMA for seasonal datasets.
+- **Prophet (by Facebook)**: Handles missing data, seasonality, and holidays.
+- **LSTM (Neural Networks)**: For deep learning approaches to time series.
 
 Each model has pros and cons based on the complexity and behavior of your data.
 
@@ -103,39 +103,40 @@ The choice depends on:
 2. Splitting training and test data
 
 To validate performance, the dataset is split into:
-- Training set: Used to build the model.
-- Test set: Used to test its prediction power.
+- **Training set**: Used to build the model.
+- **Test set**: Used to test its prediction power.
+
 This mimics real-world forecasting where future data is unknown.
 
 3. Evaluating the model performance
 
 We assess the accuracy of predictions using metrics like:
-- AIC, BIC
-  These are model selection criteria that evaluate the goodness of fit while penalizing for model complexity.
-  Lower AIC and BIC values indicate a better-fitting model with fewer unnecessary parameters.
+-> **AIC, BIC**
+  - These are model selection criteria that evaluate the goodness of fit while penalizing for model complexity.
+  - Lower AIC and BIC values indicate a better-fitting model with fewer unnecessary parameters.
   
-- MAE (Mean Absolute Error)
-  MAE measures the average absolute difference between the predicted values and actual observations.
-  A lower MAE indicates that the model’s predictions are consistently close to real values.
+-> **MAE (Mean Absolute Error)**
+  - MAE measures the average absolute difference between the predicted values and actual observations.
+  - A lower MAE indicates that the model’s predictions are consistently close to real values.
 
-- RMSE (Root Mean Squared Error)
-  RMSE gives more weight to larger errors by squaring the deviations before averaging.
-  It is useful for identifying whether large prediction errors are present.
+-> **RMSE (Root Mean Squared Error)**
+  - RMSE gives more weight to larger errors by squaring the deviations before averaging.
+  - It is useful for identifying whether large prediction errors are present.
 
-- MAPE (Mean Absolute Percentage Error)
-  MAPE expresses the forecast error as a percentage of the actual values, which makes it scale-independent.
-  It’s particularly useful when comparing models across multiple genres with different popularity scales.
+-> **MAPE (Mean Absolute Percentage Error)**
+  - MAPE expresses the forecast error as a percentage of the actual values, which makes it scale-independent.
+  - It’s particularly useful when comparing models across multiple genres with different popularity scales.
 
-- Ljung-Box test
-  The Ljung-Box test checks whether the residuals (forecast errors) are uncorrelated, meaning the model has captured all meaningful patterns.
-  A high p-value (p > 0.05) suggests no autocorrelation in residuals, indicating a well-fit model.
+-> **Ljung-Box test**
+  - The Ljung-Box test checks whether the residuals (forecast errors) are uncorrelated, meaning the model has captured all meaningful patterns.
+  - A high p-value (p > 0.05) suggests no autocorrelation in residuals, indicating a well-fit model.
 
-- Jarque-Bera test
-  This test assesses whether the residuals follow a normal distribution, a key assumption for reliable confidence intervals.
-  A high p-value implies the residuals are approximately normal, validating the use of prediction intervals in forecasting.
+-> **Jarque-Bera test**
+  - This test assesses whether the residuals follow a normal distribution, a key assumption for reliable confidence intervals.
+  - A high p-value implies the residuals are approximately normal, validating the use of prediction intervals in forecasting.
 
-- Forecast vs Actual Plot
-  Visual comparison between the model’s forecast and the actual values is essential for intuitive evaluation.
+-> **Forecast vs Actual Plot**
+  - Visual comparison between the model’s forecast and the actual values is essential for intuitive evaluation.
 
 Visual comparison between predicted and actual values is also crucial.
 
