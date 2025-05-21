@@ -70,7 +70,9 @@ Interpretation of the p-value
 - p-value > 0.05 → Fail to reject the null → Non-stationary series.
 
 
-If the series is not stationary, techniques like differencing, log transformation, or seasonal adjustment are commonly applied to induce stationarity. While I'm using auto_arima() to automatically determine the optimal values for p, d, q, the results from the ADF test can be a valuable reference — especially for selecting the appropriate differencing term d. Since auto_arima() uses statistical heuristics and may not always capture the true dynamics of the data, it's good practice to validate or tweak its suggestions based on domain knowledge and stationarity test results like ADF. 
+If the series is not stationary, techniques like differencing, log transformation, or seasonal adjustment are commonly applied to induce stationarity. 
+
+While I'm using auto_arima() to automatically determine the optimal values for p, d, q, the results from the ADF test can be a valuable reference — especially for selecting the appropriate differencing term d. Since auto_arima() uses statistical heuristics and may not always capture the true dynamics of the data, it's good practice to validate or tweak its suggestions based on domain knowledge and stationarity test results like ADF. Same can be said for tweaking the seasonal components using seasonality. 
 
 
 ## Time series forecasting
@@ -108,9 +110,33 @@ This mimics real-world forecasting where future data is unknown.
 3. Evaluating the model performance
 
 We assess the accuracy of predictions using metrics like:
+- AIC, BIC
+  These are model selection criteria that evaluate the goodness of fit while penalizing for model complexity.
+  Lower AIC and BIC values indicate a better-fitting model with fewer unnecessary parameters.
+  
 - MAE (Mean Absolute Error)
+  MAE measures the average absolute difference between the predicted values and actual observations.
+  A lower MAE indicates that the model’s predictions are consistently close to real values.
+
 - RMSE (Root Mean Squared Error)
+  RMSE gives more weight to larger errors by squaring the deviations before averaging.
+  It is useful for identifying whether large prediction errors are present.
+
 - MAPE (Mean Absolute Percentage Error)
+  MAPE expresses the forecast error as a percentage of the actual values, which makes it scale-independent.
+  It’s particularly useful when comparing models across multiple genres with different popularity scales.
+
+- Ljung-Box test
+  The Ljung-Box test checks whether the residuals (forecast errors) are uncorrelated, meaning the model has captured all meaningful patterns.
+  A high p-value (p > 0.05) suggests no autocorrelation in residuals, indicating a well-fit model.
+
+- Jarque-Bera test
+  This test assesses whether the residuals follow a normal distribution, a key assumption for reliable confidence intervals.
+  A high p-value implies the residuals are approximately normal, validating the use of prediction intervals in forecasting.
+
+- Forecast vs Actual Plot
+  Visual comparison between the model’s forecast and the actual values is essential for intuitive evaluation.
+
 Visual comparison between predicted and actual values is also crucial.
 
 4. Creating a forecast for future 
