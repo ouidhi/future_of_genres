@@ -210,6 +210,7 @@ I will now fit the SARIMA model using these parameters.
 
 [Learn more about SARIMA.](Concepts.md#sarima-model-forecasting)
 
+
 - Fitted SARIMA model using selected parameters.
 - Forecasted test set and evaluated model accuracy.
 
@@ -244,16 +245,14 @@ plt.show()
 ```
 Output:
 
-<img width="678" alt="Screenshot 2025-05-17 at 4 01 39 PM" src="https://github.com/user-attachments/assets/40670769-01cc-4e90-bc7f-62170aea8133" />
+<img width="681" alt="Screenshot 2025-05-21 at 11 51 35 AM" src="https://github.com/user-attachments/assets/143be4af-fc56-4578-8cb9-03cfe2b92aeb" />
 
-![image](https://github.com/user-attachments/assets/15b263f1-eb7e-47e5-8d21-536ebe7dc0d4)
+![image](https://github.com/user-attachments/assets/ead08a17-3f9e-46ff-ad0f-e1d1778c2537)
 
 
 **vi. Model Evaluation**
 
-Used Mean Absolute Error (MAE), Root Mean Squared Error (RMSE) and Mean Absolute Percentage Error (MAPE) to evaluate test forecasts. 
-
-Also using the Ljung-Box p-value, Jarque-Bera p-value, the stationarity and seasonality checks to fine-tune the model.  
+Used Mean Absolute Error (MAE), Root Mean Squared Error (RMSE) and Mean Absolute Percentage Error (MAPE) to evaluate test forecasts. Also using the Ljung-Box p-value, Jarque-Bera p-value, the stationarity and seasonality checks to fine-tune the model.  
 
 ```python
 # Actual and predicted values
@@ -272,8 +271,17 @@ plt.plot(test.index, test, label='Actual')
 plt.plot(test.index, forecast.predicted_mean, label='Forecast')
 plt.legend()
 ```
+Let's evaluate the output:
 
-Ensured model reliability before long-term forecasting.
+- MAE: 0.36
+   -  
+RMSE: 0.42
+
+MAPE: 7.50%
+
+![image](https://github.com/user-attachments/assets/aaba1016-6fd9-4d6c-98b4-229bff131cb6)
+
+
 
 **vii. Final 2 year forecast**
 
@@ -310,12 +318,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-## Why SARIMA?
-
-The dataset contains 83 monthly data points — enough to capture yearly seasonality.
-SARIMA explicitly models both seasonal and non-seasonal components, critical for music trends that often show cyclic interest (e.g., seasonal releases, festival seasons).
-
-Other models like ARIMA don’t account for seasonality as effectively.
-
-Facebook Prophet is an alternative but SARIMA offers more statistical control and interpretability
 
