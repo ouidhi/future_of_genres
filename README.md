@@ -274,7 +274,7 @@ plt.legend()
 Let's evaluate the output:
 
 - MAE: 0.36
-   -  
+   -  On average, your model’s predictions are 0.36 units off from the actual values. This is a straightforward and           interpretable metric.
 RMSE: 0.42
 
 MAPE: 7.50%
