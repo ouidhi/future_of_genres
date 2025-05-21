@@ -178,6 +178,7 @@ SARIMA(p, d, q)(P, D, Q, s) adds:
 🟣 Seasonal Part: (P, D, Q, s)
 - P (Seasonal AutoRegressive): How many seasonal lags (e.g., 12 months ago) should influence the current value?
 - D (Seasonal Differencing): How many times should we remove seasonal trends (like year-over-year patterns)?
+    - Differencing removes repeated seasonal structures. Let’s say you sell more cold drinks every summer. That’s not a       random trend — it’s seasonal. Seasonal differencing helps isolate this pattern so the model can learn it and            adjust its forecasts accordingly. Without it, you'd confuse a seasonal pattern with a long-term trend — which           would throw off your model.
 - Q (Seasonal Moving Average): How many past seasonal errors should be included?
 - s (Seasonal Period): The length of the seasonal cycle (e.g., 12 for yearly cycles in monthly data).
 
