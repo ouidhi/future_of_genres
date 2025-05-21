@@ -23,8 +23,10 @@ Decomposition helps separate these components to better understand underlying st
 I've also used seasonal strength to back up the results. **Seasonal strength** tells us how much of the variability in our time series can be explained by its seasonal component (e.g., daily, weekly, or yearly patterns).
 
 If seasonal strength is:
-- Close to 1 → Strong, clear seasonal pattern
+- Close to 1 → Strong, clear seasonal pattern.
+    - You likely need all or some of P, D, Q > 0
 - Close to 0 → Weak or no seasonal pattern
+    - May not need all three; sometimes just D=1 is enough, or maybe skip seasonal altogether and use ARIMA
 
 ```python
 result = seasonal_decompose(genre_series, model='additive', period=12)  # for monthly data with yearly seasonality
