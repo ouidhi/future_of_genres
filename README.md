@@ -293,9 +293,6 @@ Other factors used to tweak the model:
      
 [Learn more about these factors.](Concepts.md#time-series-forecasting)
 
-
-
-
 **vii. Final 2 year forecast**
 
 Produced final forecast for 24 months ahead (2025-2026).
@@ -330,5 +327,6 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 ```
+![image](https://github.com/user-attachments/assets/ccdd11e7-9c16-4f40-abd3-605685b98254)
 
-
+The SARIMA model captures the long-term decline and seasonal patterns in Hip Hop music popularity well. Forecasts suggest a continued but slow decline, with possible stabilization.
