@@ -60,6 +60,12 @@ You'll find:
 * Clear trends, turning points, and seasonality patterns
 * Commentary on what the numbers reveal about music, culture, and what's next
 
+## 🔎 Want to dig deeper into the full modeling process and genre-by-genre interpretations?
+
+👉 [Check out the full notebook here.]()
+
+This walks through each genre's stationarity, seasonality, model tuning, evaluation scores, and 24-month forecasts — everything from raw signal to cultural readout.
+
 ---
 
 ## 🔧 How I Built It
