@@ -274,12 +274,25 @@ plt.legend()
 Let's evaluate the output:
 
 - MAE: 0.36
-   -  On average, your model’s predictions are 0.36 units off from the actual values. This is a straightforward and           interpretable metric.
-RMSE: 0.42
-
-MAPE: 7.50%
+   -  On average, my model’s predictions are 0.36 units off from the actual values. This is a straightforward and interpretable metric.
+- RMSE: 0.42
+   - Gives more weight to larger errors. Since it’s close to MAE, it tells us we don’t have huge spikes in error—which is good.
+- MAPE: 7.50%
+   - My predictions are off by 7.5% on average, which is considered excellent in many real-world time series tasks (anything under 10% is solid).
 
 ![image](https://github.com/user-attachments/assets/aaba1016-6fd9-4d6c-98b4-229bff131cb6)
+
+Other factors used to tweak the model:
+
+- Ljung-Box (Q) p-value = 0.82 
+   - No autocorrelation in residuals (white noise).
+- Jarque-Bera (JB) p-value = 	0.53
+   - Residuals follow a normal distribution.
+- Heteroskedasticity (H) p-value = 0.73
+   - Constant variance — no heteroskedasticity.
+     
+[Learn more about these factors.]()
+
 
 
 
