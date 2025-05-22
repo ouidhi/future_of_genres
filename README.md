@@ -1,7 +1,5 @@
 # Future of Music Genre Trends: Time Series Forecasting
 
----
-
 ## 👁️‍🗨️ Why This Project Exists
 
 The soundscape of global music is changing — faster than ever. TikTok virality, global genre crossovers, and streaming algorithms are reshaping what we listen to and why. But what if we could *predict* where the cultural current is headed next?
