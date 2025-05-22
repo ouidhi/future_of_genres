@@ -291,7 +291,7 @@ Other factors used to tweak the model:
 - Heteroskedasticity (H) p-value = 0.73
    - Constant variance — no heteroskedasticity.
      
-[Learn more about these factors.]()
+[Learn more about these factors.](Concepts.md#time-series-forecasting)
 
 
 
