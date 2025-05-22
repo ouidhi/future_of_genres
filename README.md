@@ -202,4 +202,4 @@ This isn’t just data. It’s a mirror of culture — of what moves us, what fa
 
 ---
 
-Want to collab or riff off this idea? Let’s chat: \[[LinkedIn](https://www.linkedin.com/in/vidhi-parmar777/)]
+Want to collab or riff off this idea? Let’s chat: \[ [my LinkedIn](https://www.linkedin.com/in/vidhi-parmar777/) ]
