@@ -101,6 +101,7 @@ I performed a seasonal decomposition and saw a **repeating yearly pattern**, alt
 This justified the use of **SARIMA** (which accounts for both seasonality and non-stationarity) over simpler ARIMA.
 
 [Learn more about Seasonality.](Concepts.md)
+
 ---
 
 ### **iii. How did I train and test the model?**
