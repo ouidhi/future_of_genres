@@ -52,6 +52,8 @@ Each genre went through the same modeling workflow:
 
 If you're more interested in the story the data tells — not the modeling journey — you can jump straight into the final visualizations, forecasts, and genre insights.
 
+Explore the **historical and predicted trends** for each genre, backed by cultural context and data visualizations:
+
 👉 [Click here to explore the results.](Forecast_Results.md)
 
 You'll find:
