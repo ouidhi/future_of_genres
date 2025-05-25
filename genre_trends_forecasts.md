@@ -16,6 +16,7 @@ From 2018 to 2024, hip-hop experienced a slow decline in top chart representatio
 The model suggests a continued decline or plateau through 2027. This may reflect shifting listener preferences toward more genre-fluid, emotional, or “alternative” styles that deviate from traditional hip-hop formulas. The increasing role of **AI in music creation** and its potential to replace human artists could impact hip-hop's future, especially regarding copyright and the nature of art. 
 
 [1] [Newsweek: Hip-Hop's Decline](https://www.newsweek.com/hip-hop-decline-music-billboard-1896490)
+
 [2] [iMusician: Music Trends 2025](https://imusician.pro/en/resources/blog/music-trends-2025-our-predictions-and-what-to-expect-as-an-artist-and-fan#:~:text=First%20and%20foremost%2C%20we%20can,us%20into%20the%20new%20year.)
 
 ## 🎤 Pop
@@ -57,6 +58,7 @@ Through 2019 and into mid-2020, there's a general downward trend, with values fl
 The forecast shows an initial slight dip in early 2025, followed by a relatively stable period around the high 20s. Towards late 2026 and early 2027, the forecast shows a slight upward trend in the central prediction.
 
 [6] [Heavy Blog Is Heavy: Post-Rock 2021 in Review](https://www.heavyblogisheavy.com/2022/01/17/post-rock-post-2021-in-review/#:~:text=So%20what%20did%20post%2D%20represent,once%20again%20canceled%20or%20postponed.)
+
 [7] [Medium: Rock Is Not Dead (Again)](https://medium.com/the-riff/rock-is-not-dead-again-0719edce003b)
 
 ## 🎤 Alternative
@@ -86,7 +88,9 @@ The central forecast predicts a relatively stable period from early 2025 to earl
 Despite previous growth, K-pop's physical album exports in 2023 saw only a 0.55% increase from 2022, marking the first time in a decade that growth has stalled. The absence of major groups like BTS and Blackpink has left a void that newer acts have struggled to fill. Many new K-pop groups are criticized for lacking originality, often replicating successful formulas rather than introducing fresh concepts. This oversaturation with similar-sounding music has led to a decline in public interest. 
 
 [9] [Yale News: The Rise of K-pop](https://news.yale.edu/2023/08/21/rise-k-pop-and-what-it-reveals-about-society-and-culture)
+
 [10] [Harker Aquila: New K-pop Groups Offer Nothing New](https://harkeraquila.com/88550/opinion/k-pop-is-struggling-new-groups-offer-nothing-new/?)
+
 [11] [Malay Mail: K-pop’s Growth Falters](https://www.malaymail.com/news/showbiz/2025/01/23/k-pops-growth-falters-post-bts-blackpinkindustry-faces-challenges-amid-lack-of-new-global-stars/164322?)
 
 ## 🎤 Metal
@@ -106,7 +110,9 @@ The central forecast predicts an initial increase in early 2025, reaching values
 The global reach of metal is expanding, with bands from various countries incorporating local musical elements into their sound. Nu-metal, characterized by its fusion of heavy riffs and hip-hop elements, is experiencing a renaissance. Bands like Tetrarch, Tallah, and Vended are reinvigorating the genre with modern twists, while legacy acts such as Limp Bizkit and Mudvayne are re-entering the scene, attracting both longtime fans and new listeners
 
 [12] [Medium: Metal Enters a New Era](https://medium.com/%40Radya_27/metal-music-is-entering-a-new-era-481db0580b2f)
+
 [13] [LyricsOnCall: Cultural Resurgence of Metal](https://www.lyricsoncall.com/the-cultural-resurgence-of-metal-music/?)
+
 [14] [Wikipedia: Nu Metal](https://en.wikipedia.org/wiki/Nu_metal?)
 
 ## 🎤 Latin
@@ -122,6 +128,7 @@ From 2020 onwards, Latin music has maintained a strong presence in the global mu
 The central forecast predicts a relatively stable period from early 2025 to early 2027, with values fluctuating primarily in the 30s and 40s, similar to the most recent historical period. Latin artists frequently collaborate with international stars, expanding their reach and blending genres to appeal to diverse audiences. 
 
 [15] [In 2018, Streaming Services Helped Fuel A New Latin Explosion](https://www.npr.org/2018/12/30/680726060/in-2018-streaming-services-helped-fuel-a-new-latin-explosion)
+
 [16] [Music Business Worldwide: Latin music’s US revenues hit $1.42 billion in 2024, up 5.8% YoY](https://www.musicbusinessworldwide.com/latin-musics-us-revenues-hit-1-42-billion-in-2024-up-5-8-yoy)
 
 ## 🎤 Indie
