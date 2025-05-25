@@ -196,15 +196,34 @@ The graph displays forecasted popularity trends for several music genres from Ma
 
 ![image](https://github.com/user-attachments/assets/ab58a74f-4af9-445a-9115-c589616a90e2)
 
+Metal shows the most dramatic and consistent upward trend. Starting around 40, it rises steadily to become one of the most popular genres, reaching nearly 90 by November 2026. This indicates a strong surge in popularity.
+
+Alternative exhibits continuous and strong growth, moving from around 40 to reach popularity in the high 80s by the end of the forecast. It is consistently gaining popularity.
+
+Latin, after an initial dip, it shows consistent and significant growth from late 2025, climbing from its starting point of around 35 to the high 70s by November 2026.
+
+Kpop starts relatively high and sees a slight dip in mid-2025, but then generally trends upwards to reach the high 70s by November 2026, indicating moderate overall growth.
+
+Country genre's popularity at the end of the period is still respectable (around 40-50), but its path is very bumpy.
+
+Rock experiences an initial decline but then shows a strong resurgence in early 2026, peaking around 60. It ends the period in the high 30s, meaning it recovers from its low but doesn't necessarily achieve consistent growth above its starting point.
+
+Hip Hop shows a consistent and significant downward trend. Starting as one of the most popular genres, it drops sharply and steadily, ending in the low 20s by November 2026.
+
+Pop genre, while starting as the most popular, it undergoes a sharp initial decline and then stabilizes at a much lower popularity level (around 50-60) for the remainder of the forecast. It doesn't recover its initial dominance.
+
+Indie experiences a very significant and sustained decline throughout 2025, plummeting from its relatively high starting point of 70 to lows around 10-20. It shows only a slight recovery in 2026, ending as one of the least popular genres.
+
+### Percentage Growth of Genres (2025 Start to 2026 End)
+
+![image](https://github.com/user-attachments/assets/ca2823a6-e602-47a9-b4e9-bf9cb3f6262c)
+
+
 **Strong Growth**: Metal, Alternative, Rock.
 
 **Stable/Fluctuating**: Latin.
 
 **Declining/Volatile**: Hip Hop, Pop, Country, Kpop, Indie. (Note: Some of these, like Pop and Rock, have strong recoveries after initial dips, but their overall trajectory might be seen as more volatile than consistently growing).
-
-### Percentage Growth of Genres (2025 Start to 2026 End)
-
-![image](https://github.com/user-attachments/assets/ca2823a6-e602-47a9-b4e9-bf9cb3f6262c)
 
 - Alter (Alternative) shows an explosive forecasted growth of +575%, indicating a massive surge in interest. This suggests alternative music is poised to gain significant traction, possibly fueled by emerging artists or shifting listener preferences toward more niche, experimental sounds.
 
