@@ -143,5 +143,6 @@ From mid-2020 through 2021, values generally trended downwards, often in the low
 The forecast, starting from the current time of early 2025, predicts an initial boost in indie music's metric, then a subsequent decline through 2026, followed by a slight rebound into 2027. The indie music scene is expected to continue evolving, with trends such as genre fluidity, nostalgia-driven revivals, and technological advancements shaping its trajectory.
 
 [17] [AP News: "For a new generation of indie rock acts, country music is king"](https://apnews.com/article/indie-twang-spotify-lucinda-williams-mitski-boygenius-7a51cb6e46e1109c2f61b7d78799532e)
+
 [18] [Native Instruments Blog: "9 music trends to look out for in 2025"](https://blog.native-instruments.com/music-trends-2025/)
 
