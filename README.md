@@ -54,7 +54,7 @@ If you're more interested in the story the data tells — not the modeling journ
 
 Explore the **historical and predicted trends** for each genre, backed by cultural context and data visualizations:
 
-👉 [Click here to explore the results.](Forecast_Results.md)
+👉 [Click here to explore the results.](genre_trends_forecasts.md)
 
 You'll find:
 
