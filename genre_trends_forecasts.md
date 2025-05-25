@@ -86,7 +86,8 @@ The model suggests a continued decline or plateau through 2027. This may reflect
 
 ## 🎤 Latin
 
-![Hip-hop Forecast](./plots/hiphop_forecast.png)
+![image](https://github.com/user-attachments/assets/c81b00b0-0473-46fb-a5b4-d9cba2715e07)
+
 
 **Historical Context:**  
 From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
@@ -97,7 +98,8 @@ The model suggests a continued decline or plateau through 2027. This may reflect
 
 ## 🎤 Indie
 
-![Hip-hop Forecast](./plots/hiphop_forecast.png)
+![image](https://github.com/user-attachments/assets/4eb4edfb-d894-458b-a8e3-c963184ce734)
+
 
 **Historical Context:**  
 From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
