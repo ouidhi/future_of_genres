@@ -223,6 +223,7 @@ The graph displays forecasted popularity trends for several music genres from Ma
 **Stable/Fluctuating**: Latin.
 
 **Declining/Volatile**: Hip Hop, Pop, Country, Kpop, Indie. (Note: Some of these, like Pop and Rock, have strong recoveries after initial dips, but their overall trajectory might be seen as more volatile than consistently growing).
+
 ---
 
 ## 🗂️ Files in This Repo
@@ -230,7 +231,7 @@ The graph displays forecasted popularity trends for several music genres from Ma
 * `trend_df.csv`: Cleaned Google Trends dataset (2018–2024)
 * `forecasting.ipynb`: Full SARIMA modeling notebook (all genres)
 * `Concepts.md`: In-depth breakdown of stationarity, seasonality, and SARIMA
-* `Forecast_Results`: Folder with plots and forecast outputs
+* `genre_trends_forecasts.md`: Folder with plots and forecast outputs
 
 ---
 
