@@ -188,9 +188,9 @@ Even Hip-Hop — a once-undisputed leader — shows a **downward trend** post-20
 
 ---
 
-### 👾 Final Thoughts on the Forecast
+## 👾 Final Thoughts on the Forecast
 
-## Music Genre Popularity Forecast (2025–2026)
+### Music Genre Popularity Forecast (2025–2026)
 
 The graph displays forecasted popularity trends for several music genres from March 2025 to November 2026. 
 
@@ -202,7 +202,7 @@ The graph displays forecasted popularity trends for several music genres from Ma
 
 **Declining/Volatile**: Hip Hop, Pop, Country, Kpop, Indie. (Note: Some of these, like Pop and Rock, have strong recoveries after initial dips, but their overall trajectory might be seen as more volatile than consistently growing).
 
-## Percentage Growth of Genres (2025 Start to 2026 End)
+### Percentage Growth of Genres (2025 Start to 2026 End)
 
 ![image](https://github.com/user-attachments/assets/ca2823a6-e602-47a9-b4e9-bf9cb3f6262c)
 
