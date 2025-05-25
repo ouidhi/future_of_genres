@@ -156,7 +156,7 @@ The model also passed residual diagnostics:
 
 ![image](https://github.com/user-attachments/assets/aaba1016-6fd9-4d6c-98b4-229bff131cb6)
 
-Visually, the forecast hugged the real values closely. ✅
+Visually, the forecast hugged the real values closely. 
 
 ---
 
