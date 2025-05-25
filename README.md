@@ -182,14 +182,40 @@ Key takeaways from the final forecast:
 * Seasonal ups and downs persist — possibly tied to cultural/industry cycles
 * Hip Hop popularity may be **stabilizing**, not crashing
 
----
-
-### 👾 Final Thoughts
-
 Even Hip-Hop — a once-undisputed leader — shows a **downward trend** post-2021. Not a collapse, but a flattening curve... maybe making space for genres like Latin, K-Pop, or Indie to step up?
 
 👉 [View the forecast results for all genres here.](genre_trends_forecasts.md)
 
+---
+
+### 👾 Final Thoughts on the Forecast
+
+## Music Genre Popularity Forecast (2025–2026)
+
+The graph displays forecasted popularity trends for several music genres from March 2025 to November 2026. 
+
+![image](https://github.com/user-attachments/assets/ab58a74f-4af9-445a-9115-c589616a90e2)
+
+**Strong Growth**: Metal, Alternative, Rock.
+
+**Stable/Fluctuating**: Latin.
+
+**Declining/Volatile**: Hip Hop, Pop, Country, Kpop, Indie. (Note: Some of these, like Pop and Rock, have strong recoveries after initial dips, but their overall trajectory might be seen as more volatile than consistently growing).
+
+## Percentage Growth of Genres (2025 Start to 2026 End)
+
+![image](https://github.com/user-attachments/assets/ca2823a6-e602-47a9-b4e9-bf9cb3f6262c)
+
+- Alter (Alternative) shows an explosive forecasted growth of +575%, indicating a massive surge in interest. This suggests alternative music is poised to gain significant traction, possibly fueled by emerging artists or shifting listener preferences toward more niche, experimental sounds.
+
+- Metal and Rock genres also exhibit strong positive growth, with +186% and +172% respectively. This revival hints at a resurgence in these traditionally dominant genres, perhaps tied to renewed fan engagement or successful crossover trends.
+
+- On the flip side, genres like Country (-91%), Hip-Hop (-89%), K-Pop (-65%), and Indie (-38%) show significant declines in relative interest. These steep drops could reflect market saturation, shifting cultural trends, or evolving listener demographics.
+
+- Pop music is projected to decline moderately by -24%, which may indicate fragmentation in mainstream tastes or competition from rising genres.
+
+- Latin music remains essentially flat with a modest growth of +2%, signaling stable but not accelerating interest.
+  
 ---
 
 ## 🗂️ Files in This Repo
