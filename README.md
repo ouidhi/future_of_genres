@@ -100,6 +100,8 @@ Yes, but it’s **weak**.
 
 I performed a seasonal decomposition and saw a **repeating yearly pattern**, although not very strong. The seasonal strength score came out to **0.417** (closer to 0 = weak). Here's what the breakdown showed:
 
+![image](https://github.com/user-attachments/assets/fd52acf6-88b2-44d2-b8cb-4dd1e3db3db3)
+
 * **Trend:** A consistent downward trend from 2018 to 2022, then it flattens.
 * **Seasonality:** Some repetition every year, but not super pronounced.
 * **Residuals:** Random fluctuations — fairly balanced around zero, which is a good sign.
