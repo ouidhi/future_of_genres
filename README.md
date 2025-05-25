@@ -7,6 +7,14 @@ The soundscape of global music is changing — faster than ever. TikTok virality
 This project dives into that question by forecasting monthly search interest (2018–2024) for 9 major music genres and projecting their trajectories through 2025 and 2026. Think of it as a data crystal ball for music execs, brand strategists, and fans alike — spotlighting what genres are poised to surge, fade, or surprise us next.
 
 ---
+## 🎯 Who This Is For
+
+* **Label execs & A\&R scouts** looking for the next big sound
+* **Brand collab teams** identifying emerging music movements
+* **Streaming platforms** shaping recommendation algorithms
+* **Artists** curious about genre momentum & timing their releases
+
+---
 
 ## 📊 The Data: Where Culture Meets Curiosity
 
@@ -181,15 +189,6 @@ Key takeaways from the final forecast:
 Even Hip-Hop — a once-undisputed leader — shows a **downward trend** post-2021. Not a collapse, but a flattening curve... maybe making space for genres like Latin, K-Pop, or Indie to step up?
 
 👉 [View the forecast results for all genres here.](genre_trends_forecasts.md)
-
----
-
-## 🎯 Who This Is For
-
-* **Label execs & A\&R scouts** looking for the next big sound
-* **Brand collab teams** identifying emerging music movements
-* **Streaming platforms** shaping recommendation algorithms
-* **Artists** curious about genre momentum & timing their releases
 
 ---
 
