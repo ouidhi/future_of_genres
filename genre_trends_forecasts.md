@@ -73,33 +73,57 @@ https://medium.com/the-riff/rock-is-not-dead-again-0719edce003b
 ![image](https://github.com/user-attachments/assets/382d163a-9fca-4ed5-bfae-036be2707198)
 
 **Historical Context:**  
-From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
+From late 2020 to late 2021, there's a noticeable decline, with values dipping into the high 20s. From late 2021 to late 2023, the values show considerable volatility, with a significant jump in late 2021, followed by fluctuations mainly between 30 and 36, and a recent slight upward trend towards the end of the historical period (early 2024).
 
 **Forecast Insight:**  
-The model suggests a continued decline or plateau through 2027. This may reflect shifting listener preferences toward more genre-fluid, emotional, or “alternative” styles that deviate from traditional hip-hop formulas.
+Alternative music's popularity is likely to continue and potentially increase after 2025 due to several factors. Firstly, independent artists, known for their authenticity and raw sound, are gaining mainstream traction, according to Epidemic Sound. Secondly, the rise of online tastemakers and streaming platforms is creating a more diverse and genre-bending musical landscape, pushing artists to experiment and challenge traditional styles, says Epidemic Sound. Thirdly, alternative music's emotional resonance and ability to reflect current societal issues are likely to appeal to audiences seeking genuine expression.
+
+https://www.grammy.com/news/music-trends-you-may-see-in-2025-predictions-j-pop-videos-rock
+
 
 ## 🎤 Kpop
 
 ![image](https://github.com/user-attachments/assets/63186e10-bc05-477a-a879-2c1cf08d0374)
 
-
 **Historical Context:**  
-From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
 
-**Forecast Insight:**  
-The model suggests a continued decline or plateau through 2027. This may reflect shifting listener preferences toward more genre-fluid, emotional, or “alternative” styles that deviate from traditional hip-hop formulas.
+In 2020, K-pop experienced a surge in popularity, partly due to the COVID-19 pandemic and its impact on people's leisure activities. The pandemic led to lockdowns and increased screen time, making it easier for people to explore K-pop music and videos. Additionally, the success of K-pop artists like BTS and Blackpink in the international market, including topping the Billboard charts, further fueled the trend.
+
+From early 2024 to early 2025 (the end of the historical data), there's a slight downward trend, with values dropping from the mid-20s to around 20-22.
+
+**Forecast Insight:** 
+
+The central forecast predicts a relatively stable period from early 2025 to early 2027, with values fluctuating primarily in the low to mid-20s, similar to the most recent historical period. In an effort to appeal to a global audience, K-pop has shifted away from its Korean roots, leading to a homogenized sound that lacks distinctiveness. This move has alienated domestic fans and diluted the genre's unique cultural appeal.
+
+Despite previous growth, K-pop's physical album exports in 2023 saw only a 0.55% increase from 2022, marking the first time in a decade that growth has stalled. The absence of major groups like BTS and Blackpink has left a void that newer acts have struggled to fill. Many new K-pop groups are criticized for lacking originality, often replicating successful formulas rather than introducing fresh concepts. This oversaturation with similar-sounding music has led to a decline in public interest. 
+
+https://news.yale.edu/2023/08/21/rise-k-pop-and-what-it-reveals-about-society-and-culture
+
+https://harkeraquila.com/88550/opinion/k-pop-is-struggling-new-groups-offer-nothing-new/?utm_source=chatgpt.com
+
+https://www.malaymail.com/news/showbiz/2025/01/23/k-pops-growth-falters-post-bts-blackpinkindustry-faces-challenges-amid-lack-of-new-global-stars/164322?utm_source=chatgpt.com
 
 ## 🎤 Metal
 
 ![image](https://github.com/user-attachments/assets/3a780b7c-af5c-478e-b256-c04a3a6426ac)
 
-
 **Historical Context:**  
-From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
+From early 2022 to early 2025 (the end of the historical data), the values generally fluctuated between 60 and 75, showing some volatility but maintaining a higher level than the pre-2021 period. The most recent historical data points (late 2024 to early 2025) show an upward trend, approaching 80.
+
+Platforms like TikTok and YouTube have played pivotal roles in catapulting metal bands into the spotlight. For instance, Jinjer's live performance of "Pisces" went viral, amassing millions of views and introducing the band to a global audience . Similarly, Ghost's "Mary On A Cross" gained traction on TikTok, resonating with younger listeners and broadening the band's fan base 
+
+Metal's integration into popular culture has further fueled its resurgence. Notably, Metallica's "Master of Puppets" featured prominently in the Netflix series Stranger Things, leading to a renewed interest in the band's music among younger viewers. This exposure extended to collaborations, such as Metallica's partnership with the video game Fortnite, and high-profile performances like Gojira's appearance at the Paris 2024 Olympics .
 
 **Forecast Insight:**  
-The model suggests a continued decline or plateau through 2027. This may reflect shifting listener preferences toward more genre-fluid, emotional, or “alternative” styles that deviate from traditional hip-hop formulas.
+The central forecast predicts an initial increase in early 2025, reaching values around 80, followed by a slight decline and then a general upward trend through 2026 into early 2027, eventually reaching values in the low to mid-90s. This suggests continued growth for metal music according to the central prediction.
 
+The global reach of metal is expanding, with bands from various countries incorporating local musical elements into their sound. Nu-metal, characterized by its fusion of heavy riffs and hip-hop elements, is experiencing a renaissance. Bands like Tetrarch, Tallah, and Vended are reinvigorating the genre with modern twists, while legacy acts such as Limp Bizkit and Mudvayne are re-entering the scene, attracting both longtime fans and new listeners
+
+https://medium.com/%40Radya_27/metal-music-is-entering-a-new-era-481db0580b2f
+
+https://www.lyricsoncall.com/the-cultural-resurgence-of-metal-music/?utm_source=chatgpt.com
+
+https://en.wikipedia.org/wiki/Nu_metal?utm_source=chatgpt.com
 
 ## 🎤 Latin
 
@@ -107,11 +131,16 @@ The model suggests a continued decline or plateau through 2027. This may reflect
 
 
 **Historical Context:**  
-From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
+From early 2018 to early 2019, the values generally fluctuated between 40 and 60, with a notable peak nearing 100 in early 2019. Latin artists like Ozuna, J Balvin, and Bad Bunny dominated platforms such as YouTube and Spotify. In 2018, eight of the ten most-viewed music videos on YouTube were Latin songs, highlighting the genre's massive online presence. Artists such as J Balvin and Bad Bunny performed at prominent festivals like Coachella, further cementing Latin music's place in mainstream culture. 
+
+From 2020 onwards, Latin music has maintained a strong presence in the global music scene. In 2024, the genre's revenue in the U.S. reached a record $1.42 billion, marking the third consecutive year surpassing the $1 billion mark.
 
 **Forecast Insight:**  
-The model suggests a continued decline or plateau through 2027. This may reflect shifting listener preferences toward more genre-fluid, emotional, or “alternative” styles that deviate from traditional hip-hop formulas.
+The central forecast predicts a relatively stable period from early 2025 to early 2027, with values fluctuating primarily in the 30s and 40s, similar to the most recent historical period. Latin artists frequently collaborate with international stars, expanding their reach and blending genres to appeal to diverse audiences. 
 
+https://www.npr.org/2018/12/30/680726060/in-2018-streaming-services-helped-fuel-a-new-latin-explosion?utm_source=chatgpt.com
+
+https://www.musicbusinessworldwide.com/latin-musics-us-revenues-hit-1-42-billion-in-2024-up-5-8-yoy/?utm_source=chatgpt.com
 
 ## 🎤 Indie
 
