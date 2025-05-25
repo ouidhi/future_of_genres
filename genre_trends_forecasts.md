@@ -144,12 +144,16 @@ https://www.musicbusinessworldwide.com/latin-musics-us-revenues-hit-1-42-billion
 
 ## 🎤 Indie
 
-![image](https://github.com/user-attachments/assets/4eb4edfb-d894-458b-a8e3-c963184ce734)
-
+![image](https://github.com/user-attachments/assets/8db06065-8046-4cb3-a1c2-07f544d2faa0)
 
 **Historical Context:**  
-From 2018 to 2024, hip-hop experienced a slow decline in top chart representation. After its global dominance in the late 2010s, genre fatigue, oversaturation, and a shift toward genre blending and indie music may have caused the dip.
+
+There was a notable peak around early 2020, reaching approximately 45, followed by a decline.
+From mid-2020 through 2021, values generally trended downwards, often in the low to mid-30s. TikTok became a significant platform for music discovery, with many indie tracks going viral through user-generated content. This exposure led to increased streaming and chart success for indie artists.
 
 **Forecast Insight:**  
-The model suggests a continued decline or plateau through 2027. This may reflect shifting listener preferences toward more genre-fluid, emotional, or “alternative” styles that deviate from traditional hip-hop formulas.
+The forecast, starting from the current time of early 2025, predicts an initial boost in indie music's metric, then a subsequent decline through 2026, followed by a slight rebound into 2027. The indie music scene is expected to continue evolving, with trends such as genre fluidity, nostalgia-driven revivals, and technological advancements shaping its trajectory.
 
+https://apnews.com/article/indie-twang-spotify-lucinda-williams-mitski-boygenius-7a51cb6e46e1109c2f61b7d78799532e 
+
+https://blog.native-instruments.com/music-trends-2025/?utm_source=chatgpt.com
