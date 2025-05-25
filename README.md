@@ -228,10 +228,14 @@ The graph displays forecasted popularity trends for several music genres from Ma
 
 ## 🗂️ Files in This Repo
 
-* `trend_df.csv`: Cleaned Google Trends dataset (2018–2024)
-* `forecasting.ipynb`: Full SARIMA modeling notebook (all genres)
+* `genre_trends_forecasts.md`: File with plots and forecast outputs
 * `Concepts.md`: In-depth breakdown of stationarity, seasonality, and SARIMA
-* `genre_trends_forecasts.md`: Folder with plots and forecast outputs
+* `data_retrieval.ipynb`: Code for Google Trends data retrieval
+* `forecasting.ipynb`: Full SARIMA modeling notebook (all genres)
+* `visualizations.ipynb`: Comparison plots for all genres
+* `forecasts.csv`: Forecast time series data
+* `trend_df.csv`: Cleaned Google Trends dataset (2018–2024)
+* `normalized_df.csv`: Normalized forecast time series data
 
 ---
 
