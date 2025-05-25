@@ -36,7 +36,7 @@ Genres like **R\&B** were removed due to low signal variance — a story in itse
 
 Music trends have rhythm — both metaphorically and statistically. That’s why I didn’t just pick any model — I used **SARIMA**, a time series model that embraces seasonality. We’re not just predicting *more of the same* — we’re mapping the *when* and *why* behind peaks and dips.
 
-[Learn more about SARIMA.](Concepts.md#sarima-model-forecasting)
+👉 [Learn more about SARIMA.](Concepts.md#sarima-model-forecasting)
 
 Each genre went through the same modeling workflow:
 
@@ -110,7 +110,7 @@ I performed a seasonal decomposition and saw a **repeating yearly pattern**, alt
 
 This justified the use of **SARIMA** (which accounts for both seasonality and non-stationarity) over simpler ARIMA.
 
-[Learn more about Seasonality.](Concepts.md)
+👉 [Learn more about Seasonality.](Concepts.md)
 
 ---
 
@@ -180,7 +180,7 @@ Key takeaways from the final forecast:
 
 Even Hip-Hop — a once-undisputed leader — shows a **downward trend** post-2021. Not a collapse, but a flattening curve... maybe making space for genres like Latin, K-Pop, or Indie to step up?
 
-[View the whole forecast results for all genres here.](genre_trends_forecasts.md)
+👉 [View the forecast results for all genres here.](genre_trends_forecasts.md)
 
 ---
 
