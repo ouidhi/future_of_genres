@@ -174,10 +174,11 @@ Key takeaways from the final forecast:
 
 ---
 
-### 🌟 Final Thoughts
+### 👾 Final Thoughts
 
 Even Hip-Hop — a once-undisputed leader — shows a **downward trend** post-2021. Not a collapse, but a flattening curve... maybe making space for genres like Latin, K-Pop, or Indie to step up?
 
+[View the whole forecast results for all genres here.](Forecast_Results.md)
 ---
 
 ## 🎯 Who This Is For
@@ -189,7 +190,7 @@ Even Hip-Hop — a once-undisputed leader — shows a **downward trend** post-20
 
 ---
 
-## 📦 Files in This Repo
+## 🗂️ Files in This Repo
 
 * `trend_df.csv`: Cleaned Google Trends dataset (2018–2024)
 * `forecasting.ipynb`: Full SARIMA modeling notebook (all genres)
@@ -204,4 +205,4 @@ This isn’t just data. It’s a mirror of culture — of what moves us, what fa
 
 ---
 
-Want to collab or riff off this idea? Let’s chat: \[ [my LinkedIn](https://www.linkedin.com/in/vidhi-parmar777/) ]
+Want to collab or riff off this idea? Let’s chat: \[ [LinkedIn](https://www.linkedin.com/in/vidhi-parmar777/) ]
