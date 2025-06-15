@@ -1,13 +1,13 @@
 # Future of Music Genre Trends: Time Series Forecasting
 
-## 👁️‍🗨️ Why This Project Exists
+## Why This Project Exists
 
 The soundscape of global music is changing — faster than ever. TikTok virality, global genre crossovers, and streaming algorithms are reshaping what we listen to and why. But what if we could *predict* where the cultural current is headed next?
 
 This project dives into that question by forecasting monthly search interest (2018–2024) for 9 major music genres and projecting their trajectories through 2025 and 2026. Think of it as a data crystal ball for music execs, brand strategists, and fans alike — spotlighting what genres are poised to surge, fade, or surprise us next.
 
 ---
-## 🎯 Who This Is For
+## Who This Is For
 
 * **Label execs & A\&R scouts** looking for the next big sound
 * **Brand collab teams** identifying emerging music movements
@@ -16,7 +16,7 @@ This project dives into that question by forecasting monthly search interest (20
 
 ---
 
-## 📊 The Data: Where Culture Meets Curiosity
+## The Data
 
 I used Google Trends data — a real-time signal of collective curiosity — because it’s not about *what people say they like,* but what they *actually look up*. It’s raw, reactive, and highly telling.
 
@@ -40,7 +40,7 @@ Genres like **R\&B** were removed due to low signal variance — a story in itse
 
 ---
 
-## 🧠 Behind the Modeling: Why SARIMA?
+## Why SARIMA?
 
 Music trends have rhythm — both metaphorically and statistically. That’s why I didn’t just pick any model — I used **SARIMA**, a time series model that embraces seasonality. We’re not just predicting *more of the same* — we’re mapping the *when* and *why* behind peaks and dips.
 
@@ -56,7 +56,7 @@ Each genre went through the same modeling workflow:
 6. Accuracy scoring and fine-tuning.
 
 
-## 📊 Want to Skip the Process and Dive Into the Results?
+## Want to Skip the Process and Dive Into the Results?
 
 If you're more interested in the story the data tells — not the modeling journey — you can jump straight into the final visualizations, forecasts, and genre insights.
 
@@ -78,7 +78,7 @@ This walks through each genre's stationarity, seasonality, model tuning, evaluat
 
 ---
 
-## 🔧 How I Built It
+## How I Built It
 
 All code is written in Python, using:
 
@@ -226,7 +226,7 @@ The graph displays forecasted popularity trends for several music genres from Ma
 
 ---
 
-## 🗂️ Files in This Repo
+## Files in This Repo
 
 * `genre_trends_forecasts.md`: File with plots and forecast outputs
 * `Concepts.md`: In-depth breakdown of stationarity, seasonality, and SARIMA
@@ -239,7 +239,7 @@ The graph displays forecasted popularity trends for several music genres from Ma
 
 ---
 
-## ✨ Final Thought
+## Final Thought :)
 
 This isn’t just data. It’s a mirror of culture — of what moves us, what fades, and what pulses just beneath the surface. Music isn’t static, and neither should our understanding of it be.
 
