@@ -244,6 +244,5 @@ The graph displays forecasted popularity trends for several music genres from Ma
 This isn’t just data. It’s a mirror of culture — of what moves us, what fades, and what pulses just beneath the surface. Music isn’t static, and neither should our understanding of it be.
 
 ## 📬 Contact
-
-Created by **Vidhi**  
+ 
 🔗 [LinkedIn](https://www.linkedin.com/in/vidhi-parmar777/) | [Email](vidhi30th@gmail.com) 
