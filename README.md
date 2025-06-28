@@ -72,7 +72,7 @@ You'll find:
 
 ## 🔎 Want to dig deeper into the full modeling process and genre-by-genre interpretations?
 
-👉 [Check out the full notebook here.]()
+👉 [Check out the full notebook here.](notebooks/forecasting.ipynb)
 
 This walks through each genre's stationarity, seasonality, model tuning, evaluation scores, and 24-month forecasts — everything from raw signal to cultural readout.
 
