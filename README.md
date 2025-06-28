@@ -245,4 +245,4 @@ This isn’t just data. It’s a mirror of culture — of what moves us, what fa
 
 ## 📬 Contact
  
-🔗 [LinkedIn](https://www.linkedin.com/in/vidhi-parmar777/) | [Email](vidhi30th@gmail.com) 
+🔗 [LinkedIn](https://www.linkedin.com/in/vidhi-parmar1/) | [Email](vidhi30th@gmail.com) 
