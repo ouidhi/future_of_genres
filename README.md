@@ -2,7 +2,7 @@
 
 ## Why This Project Exists
 
-The soundscape of global music is changing — faster than ever. TikTok virality, global genre crossovers, and streaming algorithms are reshaping what we listen to and why. But what if we could *predict* where the cultural current is headed next?
+The soundscape of global music is changing, faster than ever. TikTok virality, global genre crossovers, and streaming algorithms are reshaping what we listen to and why. But what if we could *predict* where the cultural current is headed next?
 
 This project dives into that question by forecasting monthly search interest (2018–2024) for 9 major music genres and projecting their trajectories through 2025 and 2026. Think of it as a data crystal ball for music execs, brand strategists, and fans alike — spotlighting what genres are poised to surge, fade, or surprise us next.
 
@@ -18,7 +18,7 @@ This project dives into that question by forecasting monthly search interest (20
 
 ## The Data
 
-I used Google Trends data — a real-time signal of collective curiosity — because it’s not about *what people say they like,* but what they *actually look up*. It’s raw, reactive, and highly telling.
+I used Google Trends data, a real-time signal of collective curiosity, because it’s not about *what people say they like,* but what they *actually look up*. It’s raw, reactive, and highly telling.
 
 To collect the data:
 
@@ -36,13 +36,13 @@ genres = ['hip hop music', 'pop music', 'r and b', 'country music', 'rock music'
           'alternative music', 'kpop music', 'metal music', 'latin music', 'indie music']
 ```
 
-Genres like **R\&B** were removed due to low signal variance — a story in itself about fading public interest or the term not suitable enough to collect trend data. 
+Genres like **R\&B** were removed due to low signal variance, a story in itself about fading public interest or the term not suitable enough to collect trend data. 
 
 ---
 
 ## Why SARIMA?
 
-Music trends have rhythm — both metaphorically and statistically. That’s why I didn’t just pick any model — I used **SARIMA**, a time series model that embraces seasonality. We’re not just predicting *more of the same* — we’re mapping the *when* and *why* behind peaks and dips.
+Music trends have rhythm, both metaphorically and statistically. That’s why I didn’t just pick any model, I used **SARIMA**, a time series model that embraces seasonality. We’re not just predicting *more of the same*, we’re mapping the *when* and *why* behind peaks and dips.
 
 👉 [Learn more about SARIMA.](Concepts.md#sarima-model-forecasting)
 
@@ -58,7 +58,7 @@ Each genre went through the same modeling workflow:
 
 ## Want to Skip the Process and Dive Into the Results?
 
-If you're more interested in the story the data tells — not the modeling journey — you can jump straight into the final visualizations, forecasts, and genre insights.
+If you're more interested in the story the data tells, not the modeling journey, you can jump straight into the final visualizations, forecasts, and genre insights.
 
 Explore the **historical and predicted trends** for each genre, backed by cultural context and data visualizations:
 
@@ -74,7 +74,7 @@ You'll find:
 
 👉 [Check out the full notebook here.](notebooks/forecasting.ipynb)
 
-This walks through each genre's stationarity, seasonality, model tuning, evaluation scores, and 24-month forecasts — everything from raw signal to cultural readout.
+This walks through each genre's stationarity, seasonality, model tuning, evaluation scores, and 24-month forecasts,  everything from raw signal to cultural readout.
 
 ---
 
@@ -94,7 +94,7 @@ Here’s a teaser of what that looks like for Hip-Hop:
 
 ### **i. Is the data stationary?**
 
-To build reliable forecasts using ARIMA or SARIMA, the data needs to be *stationary* — meaning its statistical properties (like mean and variance) don't shift over time.
+To build reliable forecasts using ARIMA or SARIMA, the data needs to be *stationary*, meaning its statistical properties (like mean and variance) don't shift over time.
 
 I ran an Augmented Dickey-Fuller (ADF) test to check this. The result?
 
@@ -114,7 +114,7 @@ I performed a seasonal decomposition and saw a **repeating yearly pattern**, alt
 
 * **Trend:** A consistent downward trend from 2018 to 2022, then it flattens.
 * **Seasonality:** Some repetition every year, but not super pronounced.
-* **Residuals:** Random fluctuations — fairly balanced around zero, which is a good sign.
+* **Residuals:** Random fluctuations, fairly balanced around zero, which is a good sign.
 
 This justified the use of **SARIMA** (which accounts for both seasonality and non-stationarity) over simpler ARIMA.
 
@@ -129,7 +129,7 @@ To simulate future forecasting conditions:
 * I **trained** the model on all data **except the last 12 months**
 * I **tested** the forecast performance on the **final year**
 
-This split mimics how forecasts are used in real-world settings — we test predictions on unseen data.
+This split mimics how forecasts are used in real-world settings, we test predictions on unseen data.
 
 ---
 
