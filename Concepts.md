@@ -48,7 +48,7 @@ A stationary time series has constant statistical properties (mean, variance) ov
 
 I've checked for stationarity using:
 
-Dickey-Fuller test (ADF test)- It is a statistical test used to check whether a time series is stationary — meaning its statistical properties like mean, variance, and autocorrelation don’t change over time.
+Dickey-Fuller test (ADF test)- It is a statistical test used to check whether a time series is stationary, meaning its statistical properties like mean, variance, and autocorrelation don’t change over time.
 
 ***Hypotheses in ADF Test***
 
